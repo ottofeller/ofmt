@@ -1,0 +1,29 @@
+{
+  "name": "@ottofeller/eslint-config-ottofeller",
+  "version": "0.0.1",
+  "description": "Eslint config utilized in ottofeller.com projects",
+  "main": "index.js",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "1.13.0",
+    "@typescript-eslint/parser": "1.13.0",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.16.0",
+    "eslint-plugin-ottofeller": "0.1.9",
+    "eslint-plugin-react": "7.13.0",
+    "eslint-plugin-react-hooks": "1.6.0"
+  },
+  "author": "ottofeller.com",
+  "license": "",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottofeller/eslint-config-ottofeller.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ottofeller/eslint-config-ottofeller/issues"
+  },
+  "homepage": "https://github.com/ottofeller/eslint-config-ottofeller#readme"
+}
