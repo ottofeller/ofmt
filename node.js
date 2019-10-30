@@ -5,9 +5,5 @@ module.exports = {
         'browser': false,
         'jest': true,
         'node': true,
-    },
-
-    'plugins': [],
-    'rules': {},
-    'settings': {},
+    }
 }
