@@ -5,5 +5,5 @@ module.exports = {
         'browser': false,
         'jest': true,
         'node': true,
-    }
+    },
 }
