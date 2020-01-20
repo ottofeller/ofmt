@@ -18,6 +18,7 @@ module.exports = {
 
     'plugins': [
         '@typescript-eslint',
+        'ramda'
     ],
 
     'rules': {
@@ -144,5 +145,20 @@ module.exports = {
             },
         }],
         '@typescript-eslint/no-explicit-any': 0,
+
+        // Ramda
+        'ramda/compose-simplification': 'error',
+        'ramda/cond-simplification': 'error',
+        'ramda/eq-by-simplification': 'error',
+        'ramda/filter-simplification': 'error',
+        'ramda/map-simplification': 'error',
+        'ramda/merge-simplification': 'error',
+        'ramda/no-redundant-and': 'error',
+        'ramda/no-redundant-not': 'error',
+        'ramda/no-redundant-or': 'error',
+        'ramda/pipe-simplification': 'error',
+        'ramda/reduce-simplification': 'error',
+        'ramda/set-simplification': 'error',
+        'ramda/when-simplification': 'error'
     },
 }
