@@ -8,11 +8,11 @@
     "@typescript-eslint/parser": "2.3.3",
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-react-hooks": "2.1.2",
+    "eslint-plugin-ramda": "2.5.1",
     "typescript": "3.6.3"
   },
   "devDependencies": {
-    "eslint": "6.5.1",
-    "eslint-plugin-ramda": "2.5.1"
+    "eslint": "6.5.1"
   },
   "peerDependencies": {
     "eslint": ">= 6"
