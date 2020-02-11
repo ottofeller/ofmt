@@ -33,7 +33,7 @@ module.exports = {
         }],
 
         'consistent-return': 0,
-        'curly': [2, 'multi'],
+        'curly': [2, 'all'],
         'eol-last': [1],
 
         'indent': [2, 2, {
