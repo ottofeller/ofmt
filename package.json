@@ -1,6 +1,6 @@
 {
   "name": "@ottofeller/eslint-config-ottofeller",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "Eslint config utilized in ottofeller.com projects",
   "main": "base.js",
   "dependencies": {
@@ -8,6 +8,7 @@
     "@typescript-eslint/parser": "2.19.2",
     "eslint-plugin-react": "7.18.3",
     "eslint-plugin-react-hooks": "2.3.0",
+    "eslint-plugin-ramda": "2.5.1",
     "typescript": "3.7.5"
   },
   "devDependencies": {
