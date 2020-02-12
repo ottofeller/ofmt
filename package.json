@@ -1,14 +1,14 @@
 {
   "name": "@ottofeller/eslint-config-ottofeller",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Eslint config utilized in ottofeller.com projects",
   "main": "base.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.3.3",
-    "@typescript-eslint/parser": "2.3.3",
-    "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-react-hooks": "2.1.2",
-    "typescript": "3.6.3"
+    "@typescript-eslint/eslint-plugin": "2.19.2",
+    "@typescript-eslint/parser": "2.19.2",
+    "eslint-plugin-react": "7.18.3",
+    "eslint-plugin-react-hooks": "2.3.0",
+    "typescript": "3.7.5"
   },
   "devDependencies": {
     "eslint": "6.5.1"
