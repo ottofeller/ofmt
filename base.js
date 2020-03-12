@@ -18,6 +18,7 @@ module.exports = {
 
     'plugins': [
         '@typescript-eslint',
+        'fp',
         'ramda'
     ],
 
@@ -33,8 +34,9 @@ module.exports = {
         }],
 
         'consistent-return': 0,
-        'curly': [2, 'all'],
-        'eol-last': [1],
+        'curly'            : [2, 'all'],
+        'eol-last'         : [1],
+        'fp/no-loops'      : 'error',
 
         'indent': [2, 2, {
             'ArrayExpression': 1,
@@ -130,9 +132,11 @@ module.exports = {
             },
         }],
 
-        'strict': [1, 'never'],
-        'quotes': [1, 'single'],
-        'eqeqeq': 2,
+        'id-length'     : ['error', {'exceptions': ['_']}],
+        'no-process-env': 'error',
+        'strict'        : [1, 'never'],
+        'quotes'        : [1, 'single'],
+        'eqeqeq'        : 2,
 
         '@typescript-eslint/member-delimiter-style': [1, {
             'multiline': {
@@ -144,6 +148,7 @@ module.exports = {
                 'requireLast': false,
             },
         }],
+
         '@typescript-eslint/no-explicit-any': 0,
 
         // Ramda

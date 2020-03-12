@@ -12,7 +12,8 @@
     "typescript": "3.6.3"
   },
   "devDependencies": {
-    "eslint": "6.5.1"
+    "eslint": "6.5.1",
+    "eslint-plugin-fp": "2.3.0"
   },
   "peerDependencies": {
     "eslint": ">= 6"
