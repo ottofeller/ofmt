@@ -133,11 +133,10 @@ module.exports = {
             },
         }],
 
-        'id-length'     : ['error', {'exceptions': ['_']}],
-        'no-process-env': 'error',
-        'strict'        : [1, 'never'],
-        'quotes'        : [1, 'single'],
-        'eqeqeq'        : 2,
+        'id-length': ['error', {'exceptions': ['_']}],
+        'strict'   : [1, 'never'],
+        'quotes'   : [1, 'single'],
+        'eqeqeq'   : 2,
 
         '@typescript-eslint/member-delimiter-style': [1, {
             'multiline': {

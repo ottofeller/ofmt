@@ -13,6 +13,7 @@ module.exports = {
     ],
 
     'rules': {
+        'no-process-env': 'error',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
         'react/destructuring-assignment': [1, 'never', {'ignoreClassFields': true}],
