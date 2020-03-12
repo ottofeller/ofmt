@@ -74,6 +74,7 @@ module.exports = {
         'no-shadow': [2],
         'no-unused-vars': [1],
         '@typescript-eslint/no-unused-vars': [2, {'argsIgnorePattern': '^_'}],
+        '@typescript-eslint/prefer-nullish-coalescing': [2],
         'object-curly-spacing': [1, 'never'],
         'one-var': [2, 'never'],
         'one-var-declaration-per-line': [2, 'always'],
