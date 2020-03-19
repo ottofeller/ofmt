@@ -70,6 +70,7 @@ module.exports = {
         'no-spaced-func': [1],
         'no-extra-parens': 'error',
 
+        '@typescript-eslint/no-unused-vars': [2, {'argsIgnorePattern': '^_'}],
         'no-unused-expressions': [1],
         'no-shadow': [2],
         'no-unused-vars': [1],
