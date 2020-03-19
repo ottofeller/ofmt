@@ -132,7 +132,7 @@ module.exports = {
             },
         }],
 
-        'id-length': ['error', {'exceptions': ['_']}],
+        'id-length': ['error', {'exceptions': ['_', 'R']}],
         'strict'   : [1, 'never'],
         'quotes'   : [1, 'single'],
         'eqeqeq'   : 2,
