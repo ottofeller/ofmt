@@ -61,6 +61,7 @@ module.exports = {
         'lines-around-comment': [2, {'allowBlockStart': true, 'beforeBlockComment': true, 'beforeLineComment': true}],
         'max-len': [2, {'code': 120, 'ignoreUrls': true, 'ignoreComments': true, 'tabWidth': 2}],
         'no-debugger': 1,
+        'no-duplicate-imports': 'error',
         'no-extra-semi': 1,
         'no-mixed-spaces-and-tabs': [1],
 
