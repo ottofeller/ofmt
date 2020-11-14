@@ -24,6 +24,7 @@ module.exports = {
         'react/self-closing-comp': 2,
         'react/jsx-handler-names': 0,
         'react/jsx-no-useless-fragment': 2,
+        'react/jsx-fragments': [2, 'element'],
     },
 
     'settings': {
