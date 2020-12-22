@@ -1,4 +1,8 @@
 module.exports = {
+    'extends': [
+        'plugin:import/typescript'
+    ],
+
     'parser': '@typescript-eslint/parser',
 
     'globals': {
@@ -19,7 +23,8 @@ module.exports = {
     'plugins': [
         '@typescript-eslint',
         'fp',
-        'ramda'
+        'ramda',
+        'import'
     ],
 
     'rules': {
@@ -37,6 +42,7 @@ module.exports = {
         'curly'            : [2, 'all'],
         'eol-last'         : [1],
         'fp/no-loops'      : 'error',
+        'import/no-relative-parent-imports': 2,
 
         'indent': [2, 2, {
             'ArrayExpression': 1,
