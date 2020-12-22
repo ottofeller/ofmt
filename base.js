@@ -72,6 +72,7 @@ module.exports = {
         'no-extra-parens': 'error',
 
         '@typescript-eslint/no-unused-vars': [2, {'argsIgnorePattern': '^_'}],
+        '@typescript-eslint/array-type': [2, {default: 'generic', readOnly: 'generic'}],
         'no-unused-expressions': [1],
         'no-shadow': [2],
         'no-unused-vars': [1],
