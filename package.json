@@ -4,8 +4,8 @@
   "description": "Eslint config utilized in ottofeller.com projects",
   "main": "base.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.10.0",
-    "@typescript-eslint/parser": "4.10.0",
+    "@typescript-eslint/eslint-plugin": "4.11.0",
+    "@typescript-eslint/parser": "4.11.0",
     "eslint-plugin-fp": "2.3.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-ramda": "2.5.1",
