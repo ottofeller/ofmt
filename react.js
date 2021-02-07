@@ -17,6 +17,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'warn',
         'react/destructuring-assignment': [1, 'never', {'ignoreClassFields': true}],
         'react/jsx-curly-spacing': [1, 'never'],
+        'react/jsx-key': [2, {'checkFragmentShorthand': true}],
         'react/jsx-uses-vars': 1,
         'react/prefer-stateless-function': 2,
         'react/jsx-no-bind': 2,
