@@ -183,4 +183,15 @@ module.exports = {
 
         'unicorn/prevent-abbreviations': 'error',
     },
+
+    'overrides': [
+        {
+            // Disable some rules for tests
+            'files': ['**/__tests__/*'],
+
+            'rules': {
+                'import/no-relative-parent-imports': 'off'
+            }
+        }
+    ],
 }
