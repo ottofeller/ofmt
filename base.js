@@ -79,7 +79,7 @@ module.exports = {
         // Allow for spaced alignemnt of "=" and ":"
         'no-multi-spaces': [2, {'exceptions': {'Property': true, 'AssignmentExpression': true}}],
 
-        'no-multiple-empty-lines': 'error',
+        'no-multiple-empty-lines': ['error', {max: 1}],
         'no-nested-ternary': 'error',
         'no-spaced-func': [1],
         'no-extra-parens': 'error',
