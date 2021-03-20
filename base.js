@@ -24,7 +24,8 @@ module.exports = {
         '@typescript-eslint',
         'fp',
         'ramda',
-        'import'
+        'import',
+        'unicorn'
     ],
 
     'rules': {
@@ -42,6 +43,8 @@ module.exports = {
         'curly'            : [2, 'all'],
         'eol-last'         : [1],
         'fp/no-loops'      : 'error',
+
+        'implicit-arrow-linebreak'         : ['error', 'beside'],
         'import/no-relative-parent-imports': 2,
 
         'indent': [2, 2, {
@@ -65,7 +68,9 @@ module.exports = {
 
         'key-spacing': ['error', {'afterColon': true, 'align': 'colon'}],
         'lines-around-comment': [2, {'allowBlockStart': true, 'beforeBlockComment': true, 'beforeLineComment': true}],
+        'line-comment-position': ['warn', {'position': 'above'}],
         'max-len': [2, {'code': 120, 'ignoreUrls': true, 'ignoreComments': true, 'tabWidth': 2}],
+        'max-lines': ['warn', 300],
         'no-debugger': 1,
         'no-duplicate-imports': 'error',
         'no-extra-semi': 1,
@@ -74,6 +79,8 @@ module.exports = {
         // Allow for spaced alignemnt of "=" and ":"
         'no-multi-spaces': [2, {'exceptions': {'Property': true, 'AssignmentExpression': true}}],
 
+        'no-multiple-empty-lines': 'error',
+        'no-nested-ternary': 'error',
         'no-spaced-func': [1],
         'no-extra-parens': 'error',
 
@@ -118,6 +125,7 @@ module.exports = {
             'asyncArrow': 'always',
         }],
 
+        'spaced-comment': ['error', 'always'],
         'sort-keys': ['error', 'asc', {'caseSensitive': false}],
 
         'keyword-spacing': [2, {
@@ -171,6 +179,8 @@ module.exports = {
         'ramda/pipe-simplification': 'error',
         'ramda/reduce-simplification': 'error',
         'ramda/set-simplification': 'error',
-        'ramda/when-simplification': 'error'
+        'ramda/when-simplification': 'error',
+
+        'unicorn/prevent-abbreviations': 'error',
     },
 }
