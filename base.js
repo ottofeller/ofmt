@@ -181,7 +181,18 @@ module.exports = {
         'ramda/set-simplification': 'error',
         'ramda/when-simplification': 'error',
 
-        'unicorn/prevent-abbreviations': 'error',
+        'unicorn/prevent-abbreviations': [
+            'error',
+
+            {
+                'replacements': {
+                    'dir': false,
+                    'dirs': false,
+                    'params': false,
+                    'props': false
+                }
+            }
+        ],
     },
 
     'overrides': [
