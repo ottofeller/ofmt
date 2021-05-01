@@ -30,6 +30,7 @@ module.exports = {
 
     'rules': {
         'arrow-parens': [2, 'as-needed'],
+        'capitalized-comments': ['error'],
 
         'comma-dangle': ['error', {
             'arrays': 'always-multiline',
