@@ -72,6 +72,7 @@ module.exports = {
         'line-comment-position': ['warn', {'position': 'above'}],
         'max-len': [2, {'code': 120, 'ignoreUrls': true, 'ignoreComments': true, 'tabWidth': 2}],
         'max-lines': ['warn', 300],
+        'max-params': ['warn', 1],
         'no-debugger': 1,
         'no-duplicate-imports': 'error',
         'no-extra-semi': 1,
