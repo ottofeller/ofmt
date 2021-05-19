@@ -144,6 +144,7 @@ module.exports = {
                 'from': {'after': true, 'before': true},
                 'import': {'after': true, 'before': false},
                 'let': {'after': true, 'before': false},
+                'of': {'after': true, 'before': true},
                 'return': {'after': true, 'before': false},
                 'try': {'after': true, 'before': false},
                 'var': {'after': true, 'before': false},
