@@ -10,11 +10,11 @@ module.exports = {
     'plugins': [
         'react',
         'react-hooks',
-        'ottofeller',
+        '@ottofeller/ottofeller',
     ],
 
     'rules': {
-        'ottofeller/jsx-newline-block': ['error'],
+        '@ottofeller/ottofeller/jsx-newline-block': ['error'],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
         'react/destructuring-assignment': [1, 'never', {'ignoreClassFields': true}],
