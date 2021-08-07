@@ -6,9 +6,9 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "4.11.0",
     "@typescript-eslint/parser": "4.11.0",
+    "@ottofeller/eslint-plugin-ottofeller": "0.1.2",
     "eslint-plugin-fp": "2.3.0",
     "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-ottofeller": "github:ottofeller/eslint-plugin-ottofeller",
     "eslint-plugin-ramda": "2.5.1",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
