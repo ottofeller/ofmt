@@ -90,7 +90,6 @@ module.exports = {
 
         '@typescript-eslint/no-unused-vars': [2, {'argsIgnorePattern': '^_'}],
         '@typescript-eslint/array-type': [2, {default: 'generic', readOnly: 'generic'}],
-        'no-alert': 'error',
         'no-unused-expressions': [1],
         'no-shadow': [2],
         'no-unused-vars': [1],
