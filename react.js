@@ -27,6 +27,7 @@ module.exports = {
         'react/jsx-handler-names': 0,
         'react/jsx-no-useless-fragment': 2,
         'react/jsx-fragments': [2, 'element'],
+        'react/no-unused-prop-types': 'error'
     },
 
     'settings': {

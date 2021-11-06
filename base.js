@@ -82,12 +82,15 @@ module.exports = {
         'no-multi-spaces': [2, {'exceptions': {'Property': true, 'AssignmentExpression': true}}],
 
         'no-multiple-empty-lines': ['error', {max: 1}],
+        'no-negated-condition': 'error',
         'no-nested-ternary': 'error',
         'no-spaced-func': [1],
         'no-extra-parens': 'error',
+        'no-unneeded-ternary': 'error',
 
         '@typescript-eslint/no-unused-vars': [2, {'argsIgnorePattern': '^_'}],
         '@typescript-eslint/array-type': [2, {default: 'generic', readOnly: 'generic'}],
+        'no-alert': 'error',
         'no-unused-expressions': [1],
         'no-shadow': [2],
         'no-unused-vars': [1],
