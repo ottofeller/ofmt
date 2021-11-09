@@ -97,6 +97,7 @@ module.exports = {
         'one-var': [2, 'never'],
         'one-var-declaration-per-line': [2, 'always'],
         'padded-blocks': [2, 'never'],
+        'no-alert': 'error',
 
         'padding-line-between-statements': [
             'error',
