@@ -29,8 +29,8 @@ module.exports = {
     ],
 
     'rules': {
-        'arrow-parens': [2, 'as-needed'],
-        'capitalized-comments': ['error'],
+        'arrow-parens': ['error', 'as-needed'],
+        'capitalized-comments': 'error',
 
         'comma-dangle': ['error', {
             'arrays': 'always-multiline',
@@ -40,15 +40,15 @@ module.exports = {
             'functions': 'always-multiline',
         }],
 
-        'consistent-return': 0,
-        'curly'            : [2, 'all'],
-        'eol-last'         : [1],
+        'consistent-return': 'off',
+        'curly'            : ['error', 'all'],
+        'eol-last'         : 'warn',
         'fp/no-loops'      : 'error',
 
         'implicit-arrow-linebreak'         : ['error', 'beside'],
-        'import/no-relative-parent-imports': 2,
+        'import/no-relative-parent-imports': 'error',
 
-        'indent': [2, 2, {
+        'indent': ['error', 2, {
             'ArrayExpression': 1,
             'CallExpression': {'arguments': 1},
             'FunctionExpression': {'parameters': 1},
@@ -68,35 +68,35 @@ module.exports = {
         ],
 
         'key-spacing': ['error', {'afterColon': true, 'align': 'colon'}],
-        'lines-around-comment': [2, {'allowBlockStart': true, 'beforeBlockComment': true, 'beforeLineComment': true}],
+        'lines-around-comment': ['error', {'allowBlockStart': true, 'beforeBlockComment': true, 'beforeLineComment': true}],
         'line-comment-position': ['warn', {'position': 'above'}],
-        'max-len': [2, {'code': 120, 'ignoreUrls': true, 'ignoreComments': true, 'tabWidth': 2}],
+        'max-len': ['error', {'code': 120, 'ignoreUrls': true, 'ignoreComments': true, 'tabWidth': 2}],
         'max-lines': ['warn', 300],
         'max-params': ['warn', 2],
-        'no-debugger': 1,
+        'no-debugger': 'warn',
         'no-duplicate-imports': 'error',
-        'no-extra-semi': 1,
-        'no-mixed-spaces-and-tabs': [1],
+        'no-extra-semi': 'warn',
+        'no-mixed-spaces-and-tabs': 'warn',
 
         // Allow for spaced alignemnt of "=" and ":"
-        'no-multi-spaces': [2, {'exceptions': {'Property': true, 'AssignmentExpression': true}}],
+        'no-multi-spaces': ['error', {'exceptions': {'Property': true, 'AssignmentExpression': true}}],
 
         'no-multiple-empty-lines': ['error', {max: 1}],
         'no-negated-condition': 'error',
         'no-nested-ternary': 'error',
-        'no-spaced-func': [1],
+        'no-spaced-func': 'warn',
         'no-extra-parens': 'error',
         'no-unneeded-ternary': 'error',
 
-        '@typescript-eslint/no-unused-vars': [2, {'argsIgnorePattern': '^_'}],
-        '@typescript-eslint/array-type': [2, {default: 'generic', readOnly: 'generic'}],
-        'no-unused-expressions': [1],
-        'no-shadow': [2],
-        'no-unused-vars': [1],
-        'object-curly-spacing': [1, 'never'],
-        'one-var': [2, 'never'],
-        'one-var-declaration-per-line': [2, 'always'],
-        'padded-blocks': [2, 'never'],
+        '@typescript-eslint/no-unused-vars': ['error', {'argsIgnorePattern': '^_'}],
+        '@typescript-eslint/array-type': ['error', {default: 'generic', readOnly: 'generic'}],
+        'no-unused-expressions': ['warn'],
+        'no-shadow': ['error'],
+        'no-unused-vars': ['warn'],
+        'object-curly-spacing': ['warn', 'never'],
+        'one-var': ['error', 'never'],
+        'one-var-declaration-per-line': ['error', 'always'],
+        'padded-blocks': ['error', 'never'],
         'no-alert': 'error',
 
         'padding-line-between-statements': [
@@ -122,9 +122,9 @@ module.exports = {
             },
         ],
 
-        'semi': [2, 'never'],
+        'semi': ['error', 'never'],
 
-        'space-before-function-paren': [1, {
+        'space-before-function-paren': ['warn', {
             'anonymous': 'always',
             'named': 'never',
             'asyncArrow': 'always',
@@ -133,7 +133,7 @@ module.exports = {
         'spaced-comment': ['error', 'always'],
         'sort-keys': ['error', 'asc', {'caseSensitive': false}],
 
-        'keyword-spacing': [2, {
+        'keyword-spacing': ['error', {
             'after': false,
             'before': false,
 
@@ -155,11 +155,11 @@ module.exports = {
         }],
 
         'id-length': ['error', {'exceptions': ['_', 'R', 'x', 'y']}],
-        'strict'   : [1, 'never'],
-        'quotes'   : [1, 'single'],
-        'eqeqeq'   : 2,
+        'strict'   : ['warn', 'never'],
+        'quotes'   : ['warn', 'single'],
+        'eqeqeq'   : 'error',
 
-        '@typescript-eslint/member-delimiter-style': [1, {
+        '@typescript-eslint/member-delimiter-style': ['warn', {
             'multiline': {
                 'delimiter': 'none',
                 'requireLast': true,
@@ -170,7 +170,7 @@ module.exports = {
             },
         }],
 
-        '@typescript-eslint/no-explicit-any': 0,
+        '@typescript-eslint/no-explicit-any': 'off',
 
         // Ramda
         'ramda/compose-simplification': 'error',
