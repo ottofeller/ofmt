@@ -24,7 +24,6 @@ module.exports = {
         'react/prefer-stateless-function': 'error',
         'react/jsx-no-bind': 'error',
         'react/self-closing-comp': 'error',
-        'react/jsx-handler-names': 'off',
         'react/jsx-no-useless-fragment': 'error',
         'react/jsx-fragments': ['error', 'element'],
         'react/no-unused-prop-types': 'error'

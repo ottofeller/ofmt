@@ -40,7 +40,6 @@ module.exports = {
             'functions': 'always-multiline',
         }],
 
-        'consistent-return': 'off',
         'curly'            : ['error', 'all'],
         'eol-last'         : 'warn',
         'fp/no-loops'      : 'error',
@@ -169,8 +168,6 @@ module.exports = {
                 'requireLast': false,
             },
         }],
-
-        '@typescript-eslint/no-explicit-any': 'off',
 
         // Ramda
         'ramda/compose-simplification': 'error',
