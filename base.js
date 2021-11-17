@@ -89,9 +89,9 @@ module.exports = {
 
         '@typescript-eslint/no-unused-vars': ['error', {'argsIgnorePattern': '^_'}],
         '@typescript-eslint/array-type': ['error', {default: 'generic', readOnly: 'generic'}],
-        'no-unused-expressions': ['warn'],
-        'no-shadow': ['error'],
-        'no-unused-vars': ['warn'],
+        'no-unused-expressions': 'warn',
+        'no-shadow': 'error',
+        'no-unused-vars': 'warn',
         'object-curly-spacing': ['warn', 'never'],
         'one-var': ['error', 'never'],
         'one-var-declaration-per-line': ['error', 'always'],
