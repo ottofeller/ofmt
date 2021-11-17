@@ -40,7 +40,6 @@ module.exports = {
             'functions': 'always-multiline',
         }],
 
-        'consistent-return': 'off',
         'curly'            : ['error', 'all'],
         'eol-last'         : 'warn',
         'fp/no-loops'      : 'error',
@@ -82,9 +81,11 @@ module.exports = {
         'no-multi-spaces': ['error', {'exceptions': {'Property': true, 'AssignmentExpression': true}}],
 
         'no-multiple-empty-lines': ['error', {max: 1}],
+        'no-negated-condition': 'error',
         'no-nested-ternary': 'error',
         'no-spaced-func': 'warn',
         'no-extra-parens': 'error',
+        'no-unneeded-ternary': 'error',
 
         '@typescript-eslint/no-unused-vars': ['error', {'argsIgnorePattern': '^_'}],
         '@typescript-eslint/array-type': ['error', {default: 'generic', readOnly: 'generic'}],
@@ -95,6 +96,7 @@ module.exports = {
         'one-var': ['error', 'never'],
         'one-var-declaration-per-line': ['error', 'always'],
         'padded-blocks': ['error', 'never'],
+        'no-alert': 'error',
 
         'padding-line-between-statements': [
             'error',
@@ -166,8 +168,6 @@ module.exports = {
                 'requireLast': false,
             },
         }],
-
-        '@typescript-eslint/no-explicit-any': 'off',
 
         // Ramda
         'ramda/compose-simplification': 'error',
