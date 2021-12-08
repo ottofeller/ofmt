@@ -55,6 +55,7 @@ module.exports = {
     'no-nested-ternary': 'error',
     'no-shadow': 'error',
     'no-spaced-func': 'warn',
+    'no-trailing-spaces': 'error',
     'no-unneeded-ternary': 'error',
     'no-unused-expressions': 'warn',
     'no-unused-vars': 'warn',
