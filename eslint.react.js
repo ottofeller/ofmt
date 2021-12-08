@@ -1,6 +1,6 @@
 module.exports = {
   'env': {'browser': true, 'jest': true, 'node': false},
-  'extends': './base.js',
+  'extends': './eslint.base.js',
 
   'plugins': [
     '@ottofeller/ottofeller',
