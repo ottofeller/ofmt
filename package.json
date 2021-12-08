@@ -2,7 +2,7 @@
   "name": "@ottofeller/eslint-config-ottofeller",
   "version": "0.10.0",
   "description": "Eslint config utilized in ottofeller.com projects",
-  "main": "base.js",
+  "main": "eslint.base.js",
   "dependencies": {
     "@ottofeller/eslint-plugin-ottofeller": "0.1.2",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
