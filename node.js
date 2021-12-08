@@ -1,9 +1,4 @@
 module.exports = {
-    'extends': './base',
-
-    'env': {
-        'browser': false,
-        'jest': true,
-        'node': true,
-    },
+  'env': {'browser': false, 'jest': true, 'node': true},
+  'extends': './base',
 }
