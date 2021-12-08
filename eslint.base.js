@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 module.exports = {
   extends: ['plugin:import/typescript'],
   globals: {document: 'readonly', navigator: 'readonly', window: 'readonly'},
