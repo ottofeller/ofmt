@@ -342,7 +342,7 @@ module.exports = {
 
   rules: {
     'tailwindcss/classnames-order'          : ['warn', {groups, prependCustom: true}],
-    'tailwindcss/no-contradicting-classname': 'error',
+    'tailwindcss/no-contradicting-classname': ['error'],
     'tailwindcss/no-custom-classname'       : ['warn', {whitelist: ['area-span-full', 'scrollbar-hidden']}],
   },
 
