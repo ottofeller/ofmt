@@ -1,6 +1,6 @@
 {
   "name": "@ottofeller/eslint-config-ottofeller",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Eslint config utilized in ottofeller.com projects",
   "main": "eslint.base.js",
   "dependencies": {

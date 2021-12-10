@@ -70,6 +70,7 @@ const groups = [
       {members: '(order\\-${order}|\\-order\\-${-order})', type: 'Order'},
 
       // Grid col / row.
+      {members: 'area-span-full', type: 'area-span-full'},
       {members: 'col\\-${gridColumn}', type: 'grid-column'},
       {members: 'col\\-start\\-${gridColumnStart}', type: 'grid-column-start'},
       {members: 'col\\-end\\-${gridColumnEnd}', type: 'grid-column-end'},
@@ -341,7 +342,7 @@ module.exports = {
   rules: {
     'tailwindcss/classnames-order'          : ['warn', {groups, prependCustom: true}],
     'tailwindcss/no-contradicting-classname': 'error',
-    'tailwindcss/no-custom-classname'       : ['warn', {whitelist: []}],
+    'tailwindcss/no-custom-classname'       : ['warn', {whitelist: ['area-span-full']}],
   },
 
   settings: {
