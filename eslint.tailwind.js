@@ -105,6 +105,7 @@ const groups = [
       {members: 'appearance\\-none', type: 'Appearance'},
 
       // Overflow.
+      {members: 'scrollbar-hidden', type: 'scrollbar-hidden'},
       {members: 'overflow\\-(auto|hidden|visible|scroll)', type: 'overflow'},
       {members: 'overflow\\-x\\-(auto|hidden|visible|scroll)', type: 'overflow-x'},
       {members: 'overflow\\-y\\-(auto|hidden|visible|scroll)', type: 'overflow-y'},
@@ -342,7 +343,7 @@ module.exports = {
   rules: {
     'tailwindcss/classnames-order'          : ['warn', {groups, prependCustom: true}],
     'tailwindcss/no-contradicting-classname': 'error',
-    'tailwindcss/no-custom-classname'       : ['warn', {whitelist: ['area-span-full']}],
+    'tailwindcss/no-custom-classname'       : ['warn', {whitelist: ['area-span-full', 'scrollbar-hidden']}],
   },
 
   settings: {
