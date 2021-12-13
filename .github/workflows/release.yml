@@ -1,0 +1,64 @@
+name: Deploy Latest Release
+
+on:
+  release:
+    types: [published, unpublished]
+    branches:
+      - main
+
+jobs:
+  set-commit-hash:
+    runs-on: ubuntu-latest
+    outputs:
+      commit_hash: ${{ steps.commit_hash.outputs.commit_hash }}
+    steps:
+    - name: Get the latest release info
+      id: latest_release
+      uses: InsonusK/get-latest-release@v1.0.1
+      with:
+        myToken: ${{ secrets.GITHUB_TOKEN }}
+        exclude_types: "prerelease|draft"
+        view_top: 100
+    - name: Got the latest release info
+      run: echo ${{ steps.latest_release.outputs.tag_name }}
+    - name: No stable release found
+      if: steps.latest_release.outputs.tag_name == null
+      run: exit 1
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - id: commit_hash
+      name: Store the commit hash
+      run: echo "::set-output name=commit_hash::$(git rev-list -n 1 ${{ steps.latest_release.outputs.tag_name }})"
+
+  lint:
+    needs: set-commit-hash
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
+    - uses: ottofeller/npm-run@main
+      with:
+        node-version: 14
+        registry-url: https://npm.pkg.github.com/
+        scope: "@worldcoin"
+        command: npm run lint
+
+  publish-npm:
+    needs: [set-commit-hash, lint]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
+      - uses: ottofeller/npm-run@main
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org
+          scope: "@worldcoin"
+          command: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

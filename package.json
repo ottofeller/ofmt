@@ -1,6 +1,6 @@
 {
   "name": "@ottofeller/eslint-config-ottofeller",
-  "version": "0.11.4",
+  "version": "0.11.5",
   "description": "Eslint config utilized in ottofeller.com projects",
   "main": "eslint.base.js",
   "dependencies": {
@@ -26,8 +26,10 @@
   "author": "ottofeller.com",
   "license": "",
   "scripts": {
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "eslintConfig": {"extends": "./eslint.node.js"},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ottofeller/eslint-config-ottofeller.git"
