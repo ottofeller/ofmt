@@ -7,6 +7,7 @@
     "@ottofeller/eslint-plugin-ottofeller": "0.1.2",
     "@typescript-eslint/eslint-plugin": "5.6.0",
     "@typescript-eslint/parser": "5.6.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-fp": "2.3.0",
     "eslint-plugin-import": "2.25.3",
     "eslint-plugin-ramda": "2.5.1",
