@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable max-len -- Exceed max length in order to accommodate one rule per line */
 module.exports = {
   extends: ['plugin:import/typescript'],
   globals: {document: 'readonly', navigator: 'readonly', window: 'readonly'},
@@ -17,11 +17,12 @@ module.exports = {
 
   parser       : '@typescript-eslint/parser',
   parserOptions: {ecmaFeatures: {jsx: true}, ecmaVersion: 2020, sourceType: 'module'},
-  plugins      : ['@typescript-eslint', 'fp', 'import', 'ramda', 'unicorn'],
+  plugins      : ['@typescript-eslint', 'fp', 'import', 'ramda', 'unicorn', 'eslint-comments'],
 
   rules: {
     '@typescript-eslint/array-type'            : ['error', {default: 'generic', readOnly: 'generic'}],
     '@typescript-eslint/member-delimiter-style': ['warn', {multiline: {delimiter: 'none', requireLast: true}, singleline: {delimiter: 'comma', requireLast: false}}],
+    '@typescript-eslint/no-shadow'             : ['error'],
     '@typescript-eslint/no-unused-vars'        : ['error', {argsIgnorePattern: '^_'}],
     'arrow-parens'                             : ['error', 'as-needed'],
     'capitalized-comments'                     : ['error'],
@@ -29,6 +30,7 @@ module.exports = {
     'curly'                                    : ['error', 'all'],
     'eol-last'                                 : ['warn'],
     'eqeqeq'                                   : ['error'],
+    'eslint-comments/require-description'      : ['error'],
     'fp/no-loops'                              : ['error'],
     'id-length'                                : ['error', {exceptions: ['_', 'R', 'x', 'y']}],
     'implicit-arrow-linebreak'                 : ['error', 'beside'],
@@ -51,7 +53,7 @@ module.exports = {
     'no-multiple-empty-lines'                  : ['error', {max: 1}],
     'no-negated-condition'                     : ['error'],
     'no-nested-ternary'                        : ['error'],
-    'no-shadow'                                : ['error'],
+    'no-shadow'                                : ['off'],
     'no-spaced-func'                           : ['warn'],
     'no-trailing-spaces'                       : ['error'],
     'no-unneeded-ternary'                      : ['error'],
