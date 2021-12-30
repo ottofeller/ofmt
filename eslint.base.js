@@ -87,3 +87,4 @@ module.exports = {
     'unicorn/prevent-abbreviations'            : ['error', {replacements: {dir: false, dirs: false, params: false, props: false}}],
   },
 }
+/* eslint-enable max-len */
