@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/array-type'            : ['error', {default: 'generic', readOnly: 'generic'}],
     '@typescript-eslint/member-delimiter-style': ['warn', {multiline: {delimiter: 'none', requireLast: true}, singleline: {delimiter: 'comma', requireLast: false}}],
+    '@typescript-eslint/no-shadow'             : ['error'],
     '@typescript-eslint/no-unused-vars'        : ['error', {argsIgnorePattern: '^_'}],
     'arrow-parens'                             : ['error', 'as-needed'],
     'capitalized-comments'                     : ['error'],
@@ -52,7 +53,7 @@ module.exports = {
     'no-multiple-empty-lines'                  : ['error', {max: 1}],
     'no-negated-condition'                     : ['error'],
     'no-nested-ternary'                        : ['error'],
-    'no-shadow'                                : ['error'],
+    'no-shadow'                                : ['off'],
     'no-spaced-func'                           : ['warn'],
     'no-trailing-spaces'                       : ['error'],
     'no-unneeded-ternary'                      : ['error'],
