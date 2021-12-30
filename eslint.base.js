@@ -17,7 +17,7 @@ module.exports = {
 
   parser       : '@typescript-eslint/parser',
   parserOptions: {ecmaFeatures: {jsx: true}, ecmaVersion: 2020, sourceType: 'module'},
-  plugins      : ['@typescript-eslint', 'fp', 'import', 'ramda', 'unicorn', 'eslint-comments'],
+  plugins      : ['@typescript-eslint', 'eslint-comments', 'fp', 'import', 'ramda', 'unicorn'],
 
   rules: {
     '@typescript-eslint/array-type'            : ['error', {default: 'generic', readOnly: 'generic'}],
