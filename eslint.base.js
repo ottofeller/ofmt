@@ -1,4 +1,4 @@
-/* eslint-disable max-len -- Exceed max length in order to accommodate one rule per line */
+/* eslint-disable max-len -- disabling file length limitation for compactness. */
 module.exports = {
   extends: ['plugin:import/typescript'],
   globals: {document: 'readonly', navigator: 'readonly', window: 'readonly'},

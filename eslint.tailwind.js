@@ -1,4 +1,4 @@
-/* eslint-disable max-len, max-lines */
+/* eslint-disable max-len, max-lines -- disabling file length limitation for compactness. */
 const groups = [
   {
     members: [
