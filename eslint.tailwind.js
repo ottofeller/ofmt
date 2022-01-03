@@ -322,6 +322,7 @@ const groups = [
       // Transform.
       {members: 'origin\\-(?<value>${transformOrigin})', type: 'Transform Origin'},
       {members: 'transform\\-gpu', type: 'transform-gpu'},
+      {members: 'transform\\-none', type: 'transform-none'},
       {members: '(translate\\-x\\-(?<value>${translate})|\\-translate\\-x\\-(?<negativeValue>${-translate}))', type: 'translate-x'},
       {members: '(translate\\-y\\-(?<value>${translate})|\\-translate\\-y\\-(?<negativeValue>${-translate}))', type: 'translate-y'},
       {members: '(rotate\\-(?<value>${rotate})|\\-rotate\\-(?<negativeValue>${-rotate}))', type: 'Rotate'},

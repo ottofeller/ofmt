@@ -1,6 +1,6 @@
 {
   "name": "@ottofeller/eslint-config-ottofeller",
-  "version": "0.12.3",
+  "version": "0.12.4",
   "description": "Eslint config utilized in ottofeller.com projects",
   "main": "eslint.base.js",
   "dependencies": {
@@ -13,7 +13,7 @@
     "eslint-plugin-ramda": "2.5.1",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
-    "eslint-plugin-tailwindcss": "3.0.2",
+    "eslint-plugin-tailwindcss": "3.0.3",
     "eslint-plugin-unicorn": "39.0.0"
   },
   "devDependencies": {
