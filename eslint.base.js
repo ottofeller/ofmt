@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/array-type'            : ['error', {default: 'generic', readOnly: 'generic'}],
     '@typescript-eslint/member-delimiter-style': ['warn', {multiline: {delimiter: 'none', requireLast: true}, singleline: {delimiter: 'comma', requireLast: false}}],
+    '@typescript-eslint/no-extra-parens'       : ['error'],
     '@typescript-eslint/no-shadow'             : ['error'],
     '@typescript-eslint/no-unused-vars'        : ['error', {argsIgnorePattern: '^_'}],
     '@typescript-eslint/space-infix-ops'       : ['error', {int32Hint: false}],
@@ -54,7 +55,7 @@ module.exports = {
     'no-alert'                                 : ['error'],
     'no-debugger'                              : ['warn'],
     'no-duplicate-imports'                     : ['error'],
-    'no-extra-parens'                          : ['error'],
+    'no-extra-parens'                          : ['off'],
     'no-extra-semi'                            : ['warn'],
     'no-mixed-spaces-and-tabs'                 : ['warn'],
     'no-multi-spaces'                          : ['error', {exceptions: {AssignmentExpression: true, Property: true}}],
