@@ -5,16 +5,16 @@
   "main": "eslint.base.js",
   "dependencies": {
     "@ottofeller/eslint-plugin-ottofeller": "0.1.2",
-    "@typescript-eslint/eslint-plugin": "5.8.1",
-    "@typescript-eslint/parser": "5.8.1",
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-fp": "2.3.0",
-    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-import": "2.25.4",
     "eslint-plugin-ramda": "2.5.1",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
-    "eslint-plugin-tailwindcss": "3.0.3",
-    "eslint-plugin-unicorn": "39.0.0"
+    "eslint-plugin-tailwindcss": "3.2.0",
+    "eslint-plugin-unicorn": "40.0.0"
   },
   "devDependencies": {
     "eslint": "8.5.0",

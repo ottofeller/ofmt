@@ -88,13 +88,13 @@ const groups = [
       {members: 'self\\-(auto|start|end|center|stretch|baseline)', type: 'Align Self'},
 
       // Margin.
-      {members: '(m\\-(?<value>${margin})|\\-m\\-(?<negativeValue>${-margin}))', type: 'm'},
-      {members: '(mx\\-(?<value>${margin})|\\-mx\\-(?<negativeValue>${-margin}))', type: 'mx'},
-      {members: '(my\\-(?<value>${margin})|\\-my\\-(?<negativeValue>${-margin}))', type: 'my'},
-      {members: '(ml\\-(?<value>${margin})|\\-ml\\-(?<negativeValue>${-margin}))', type: 'ml'},
-      {members: '(mr\\-(?<value>${margin})|\\-mr\\-(?<negativeValue>${-margin}))', type: 'mr'},
-      {members: '(mt\\-(?<value>${margin})|\\-mt\\-(?<negativeValue>${-margin}))', type: 'mt'},
-      {members: '(mb\\-(?<value>${margin})|\\-mb\\-(?<negativeValue>${-margin}))', type: 'mb'},
+      {body: 'm', members: '(m\\-(?<value>${margin})|\\-m\\-(?<negativeValue>${-margin}))', shorthand: 'all', type: 'm'},
+      {body: 'mx', members: '(mx\\-(?<value>${margin})|\\-mx\\-(?<negativeValue>${-margin}))', shorthand: 'x', type: 'mx'},
+      {body: 'my', members: '(my\\-(?<value>${margin})|\\-my\\-(?<negativeValue>${-margin}))', shorthand: 'y', type: 'my'},
+      {body: 'ml', members: '(ml\\-(?<value>${margin})|\\-ml\\-(?<negativeValue>${-margin}))', shorthand: 'l', type: 'ml'},
+      {body: 'mr', members: '(mr\\-(?<value>${margin})|\\-mr\\-(?<negativeValue>${-margin}))', shorthand: 'r', type: 'mr'},
+      {body: 'mt', members: '(mt\\-(?<value>${margin})|\\-mt\\-(?<negativeValue>${-margin}))', shorthand: 't', type: 'mt'},
+      {body: 'mb', members: '(mb\\-(?<value>${margin})|\\-mb\\-(?<negativeValue>${-margin}))', shorthand: 'b', type: 'mb'},
 
       // Float.
       {members: 'float\\-(?<value>right|left|none)', type: 'Floats'},
@@ -114,12 +114,12 @@ const groups = [
       // Overflow / Scroll.
       {members: 'scroll\\-(auto|smooth)', type: 'Scroll Behavior'},
       {members: 'scrollbar-hidden', type: 'scrollbar-hidden'},
-      {members: 'overflow\\-(?<value>auto|hidden|clip|visible|scroll)', type: 'overflow'},
-      {members: 'overflow\\-x\\-(?<value>auto|hidden|clip|visible|scroll)', type: 'overflow-x'},
-      {members: 'overflow\\-y\\-(?<value>auto|hidden|clip|visible|scroll)', type: 'overflow-y'},
+      {body: 'overflow', members: 'overflow\\-(?<value>auto|hidden|clip|visible|scroll)', shorthand: 'all', type: 'overflow'},
+      {body: 'overflow-x', members: 'overflow\\-x\\-(?<value>auto|hidden|clip|visible|scroll)', shorthand: 'x', type: 'overflow-x'},
+      {body: 'overflow-y', members: 'overflow\\-y\\-(?<value>auto|hidden|clip|visible|scroll)', shorthand: 'y', type: 'overflow-y'},
       {members: 'overscroll\\-(?<value>auto|contain|none)', type: 'overscroll'},
-      {members: 'overscroll\\-x\\-(?<value>auto|contain|none)', type: 'overscroll-x'},
-      {members: 'overscroll\\-y\\-(?<value>auto|contain|none)', type: 'overscroll-y'},
+      {body: 'overscroll-x', members: 'overscroll\\-x\\-(?<value>auto|contain|none)', shorthand: 'x', type: 'overscroll-x'},
+      {body: 'overscroll-y', members: 'overscroll\\-y\\-(?<value>auto|contain|none)', shorthand: 'y', type: 'overscroll-y'},
       {members: 'scroll-m\\-(?<value>${scrollMargin})|\\-scroll-m\\-(?<negativeValue>${-scrollMargin})', type: 'scroll-m'},
       {members: 'scroll-mx\\-(?<value>${scrollMargin})|\\-scroll-mx\\-(?<negativeValue>${-scrollMargin})', type: 'scroll-mx'},
       {members: 'scroll-my\\-(?<value>${scrollMargin})|\\-scroll-my\\-(?<negativeValue>${-scrollMargin})', type: 'scroll-my'},
@@ -136,20 +136,21 @@ const groups = [
       {members: 'scroll-pb\\-(?<value>${scrollPadding})', type: 'scroll-pb'},
 
       // Snap points.
-      {members: 'snap\\-(none|x|y|both|mandatory|proximity)', type: 'Scroll Snap Type'},
+      {members: 'snap\\-(none|x|y|both)', type: 'Scroll Snap Type'},
+      {members: 'snap\\-(mandatory|proximity)', type: 'Scroll Snap Type Strictness'},
       {members: 'snap\\-(normal|always)', type: 'Scroll Snap Stop'},
       {members: 'snap\\-(start|end|center|align-none)', type: 'Scroll Snap Align'},
 
       // Position.
       {members: 'static|fixed|absolute|relative|sticky', type: 'Position'},
       {members: '(z\\-(?<value>${zIndex})|\\-z\\-(?<negativeValue>${-zIndex}))', type: 'Z-Index'},
-      {members: '(inset\\-(?<value>${inset})|\\-inset\\-(?<negativeValue>${-inset}))', type: 'inset'},
-      {members: '(inset\\-x\\-(?<value>${inset})|\\-inset\\-x\\-(?<negativeValue>${-inset}))', type: 'inset-x'},
-      {members: '(inset\\-y\\-(?<value>${inset})|\\-inset\\-y\\-(?<negativeValue>${-inset}))', type: 'inset-y'},
-      {members: '(left\\-(?<value>${inset})|\\-left\\-(?<negativeValue>${-inset}))', type: 'left'},
-      {members: '(right\\-(?<value>${inset})|\\-right\\-(?<negativeValue>${-inset}))', type: 'right'},
-      {members: '(top\\-(?<value>${inset})|\\-top\\-(?<negativeValue>${-inset}))', type: 'top'},
-      {members: '(bottom\\-(?<value>${inset})|\\-bottom\\-(?<negativeValue>${-inset}))', type: 'bottom'},
+      {body: 'inset', members: '(inset\\-(?<value>${inset})|\\-inset\\-(?<negativeValue>${-inset}))', shorthand: 'all', type: 'inset'},
+      {body: 'inset-x', members: '(inset\\-x\\-(?<value>${inset})|\\-inset\\-x\\-(?<negativeValue>${-inset}))', shorthand: 'x', type: 'inset-x'},
+      {body: 'inset-y', members: '(inset\\-y\\-(?<value>${inset})|\\-inset\\-y\\-(?<negativeValue>${-inset}))', shorthand: 'y', type: 'inset-y'},
+      {body: 'left', members: '(left\\-(?<value>${inset})|\\-left\\-(?<negativeValue>${-inset}))', shorthand: 'l', type: 'left'},
+      {body: 'right', members: '(right\\-(?<value>${inset})|\\-right\\-(?<negativeValue>${-inset}))', shorthand: 'r', type: 'right'},
+      {body: 'top', members: '(top\\-(?<value>${inset})|\\-top\\-(?<negativeValue>${-inset}))', shorthand: 't', type: 'top'},
+      {body: 'bottom', members: '(bottom\\-(?<value>${inset})|\\-bottom\\-(?<negativeValue>${-inset}))', shorthand: 'b', type: 'bottom'},
 
       // Display box.
       {members: 'box\\-(?<value>border|content)', type: 'Box Sizing'},
@@ -166,9 +167,9 @@ const groups = [
       {members: 'list\\-(?<value>${listStyleType})', type: 'List Style Type'},
 
       // Gap.
-      {members: 'gap\\-(?<value>${gap})', type: 'gap'},
-      {members: 'gap\\-x\\-(?<value>${gap})', type: 'column-gap'},
-      {members: 'gap\\-y\\-(?<value>${gap})', type: 'row-gap'},
+      {body: 'gap', members: 'gap\\-(?<value>${gap})', shorthand: 'all', type: 'gap'},
+      {body: 'gap-x', members: 'gap\\-x\\-(?<value>${gap})', shorthand: 'x', type: 'column-gap'},
+      {body: 'gap-y', members: 'gap\\-y\\-(?<value>${gap})', shorthand: 'y', type: 'row-gap'},
 
       // Grid.
       {members: 'grid\\-flow\\-(row|col)(\\-dense)?', type: 'Grid Auto Flow'},
@@ -200,21 +201,21 @@ const groups = [
       {members: 'items\\-(start|end|center|baseline|stretch)', type: 'Align Items'},
 
       // Border.
-      {members: 'border(\\-(?<value>${borderWidth}))?', type: 'border-width'},
-      {members: 'border\\-x(\\-(?<value>${borderWidth}))?', type: 'border-x-width'},
-      {members: 'border\\-y(\\-(?<value>${borderWidth}))?', type: 'border-y-width'},
-      {members: 'border\\-l(\\-(?<value>${borderWidth}))?', type: 'border-left-width'},
-      {members: 'border\\-r(\\-(?<value>${borderWidth}))?', type: 'border-right-width'},
-      {members: 'border\\-t(\\-(?<value>${borderWidth}))?', type: 'border-top-width'},
-      {members: 'border\\-b(\\-(?<value>${borderWidth}))?', type: 'border-bottom-width'},
+      {body: 'border', members: 'border(\\-(?<value>${borderWidth}))?', shorthand: 'all', type: 'border-width'},
+      {body: 'border-x', members: 'border\\-x(\\-(?<value>${borderWidth}))?', shorthand: 'x', type: 'border-x-width'},
+      {body: 'border-y', members: 'border\\-y(\\-(?<value>${borderWidth}))?', shorthand: 'y', type: 'border-y-width'},
+      {body: 'border-l', members: 'border\\-l(\\-(?<value>${borderWidth}))?', shorthand: 'l', type: 'border-left-width'},
+      {body: 'border-r', members: 'border\\-r(\\-(?<value>${borderWidth}))?', shorthand: 'r', type: 'border-right-width'},
+      {body: 'border-t', members: 'border\\-t(\\-(?<value>${borderWidth}))?', shorthand: 't', type: 'border-top-width'},
+      {body: 'border-b', members: 'border\\-b(\\-(?<value>${borderWidth}))?', shorthand: 'b', type: 'border-bottom-width'},
       {members: 'border\\-(solid|dashed|dotted|double|hidden|none)', type: 'Border Style'},
-      {members: 'border\\-(?<value>${borderColor})', type: 'border-color'},
-      {members: 'border\\-x\\-(?<value>${borderColor})', type: 'border-x-color'},
-      {members: 'border\\-y\\-(?<value>${borderColor})', type: 'border-y-color'},
-      {members: 'border\\-l\\-(?<value>${borderColor})', type: 'border-left-color'},
-      {members: 'border\\-r\\-(?<value>${borderColor})', type: 'border-right-color'},
-      {members: 'border\\-t\\-(?<value>${borderColor})', type: 'border-top-color'},
-      {members: 'border\\-b\\-(?<value>${borderColor})', type: 'border-bottom-color'},
+      {body: 'border', members: 'border\\-(?<value>${borderColor})', shorthand: 'all', type: 'border-color'},
+      {body: 'border-x', members: 'border\\-x\\-(?<value>${borderColor})', shorthand: 'x', type: 'border-x-color'},
+      {body: 'border-y', members: 'border\\-y\\-(?<value>${borderColor})', shorthand: 'y', type: 'border-y-color'},
+      {body: 'border-l', members: 'border\\-l\\-(?<value>${borderColor})', shorthand: 'l', type: 'border-left-color'},
+      {body: 'border-r', members: 'border\\-r\\-(?<value>${borderColor})', shorthand: 'r', type: 'border-right-color'},
+      {body: 'border-t', members: 'border\\-t\\-(?<value>${borderColor})', shorthand: 't', type: 'border-top-color'},
+      {body: 'border-b', members: 'border\\-b\\-(?<value>${borderColor})', shorthand: 'b', type: 'border-bottom-color'},
 
       // Aspect Ratio.
       {members: 'aspect\\-(?<value>${aspectRatio})', type: 'Aspect Ratio'},
@@ -228,13 +229,13 @@ const groups = [
       {members: 'max\\-h\\-(?<value>${maxHeight})', type: 'Max-Height'},
 
       // Padding.
-      {members: 'p\\-(?<value>${padding})', type: 'p'},
-      {members: 'px\\-(?<value>${padding})', type: 'px'},
-      {members: 'py\\-(?<value>${padding})', type: 'py'},
-      {members: 'pl\\-(?<value>${padding})', type: 'pl'},
-      {members: 'pr\\-(?<value>${padding})', type: 'pr'},
-      {members: 'pt\\-(?<value>${padding})', type: 'pt'},
-      {members: 'pb\\-(?<value>${padding})', type: 'pb'},
+      {body: 'p', members: 'p\\-(?<value>${padding})', shorthand: 'all', type: 'p'},
+      {body: 'px', members: 'px\\-(?<value>${padding})', shorthand: 'x', type: 'px'},
+      {body: 'py', members: 'py\\-(?<value>${padding})', shorthand: 'y', type: 'py'},
+      {body: 'pl', members: 'pl\\-(?<value>${padding})', shorthand: 'l', type: 'pl'},
+      {body: 'pr', members: 'pr\\-(?<value>${padding})', shorthand: 'r', type: 'pr'},
+      {body: 'pt', members: 'pt\\-(?<value>${padding})', shorthand: 't', type: 'pt'},
+      {body: 'pb', members: 'pb\\-(?<value>${padding})', shorthand: 'b', type: 'pb'},
 
       // Font.
       {members: 'text\\-(ellipsis|clip)', type: 'Text Overflow'},
@@ -290,15 +291,15 @@ const groups = [
       {members: 'caret\\-(?<value>${caretColor})', type: 'Caret Color'},
 
       // Border-radius.
-      {members: 'rounded(\\-(?<value>${borderRadius}))?', type: 'border-radius'},
-      {members: 'rounded\\-l(\\-(?<value>${borderRadius}))?', type: 'border-radius-left'},
-      {members: 'rounded\\-r(\\-(?<value>${borderRadius}))?', type: 'border-radius-right'},
-      {members: 'rounded\\-t(\\-(?<value>${borderRadius}))?', type: 'border-radius-top'},
-      {members: 'rounded\\-b(\\-(?<value>${borderRadius}))?', type: 'border-radius-bottom'},
-      {members: 'rounded\\-tl(\\-(?<value>${borderRadius}))?', type: 'border-radius-top-left'},
-      {members: 'rounded\\-tr(\\-(?<value>${borderRadius}))?', type: 'border-radius-top-right'},
-      {members: 'rounded\\-bl(\\-(?<value>${borderRadius}))?', type: 'border-radius-bottom-left'},
-      {members: 'rounded\\-br(\\-(?<value>${borderRadius}))?', type: 'border-radius-bottom-right'},
+      {body: 'rounded', members: 'rounded(\\-(?<value>${borderRadius}))?', shorthand: 'all', type: 'border-radius'},
+      {body: 'rounded-l', members: 'rounded\\-l(\\-(?<value>${borderRadius}))?', shorthand: 'l', type: 'border-radius-left'},
+      {body: 'rounded-r', members: 'rounded\\-r(\\-(?<value>${borderRadius}))?', shorthand: 'r', type: 'border-radius-right'},
+      {body: 'rounded-t', members: 'rounded\\-t(\\-(?<value>${borderRadius}))?', shorthand: 't', type: 'border-radius-top'},
+      {body: 'rounded-b', members: 'rounded\\-b(\\-(?<value>${borderRadius}))?', shorthand: 'b', type: 'border-radius-bottom'},
+      {body: 'rounded-tl', members: 'rounded\\-tl(\\-(?<value>${borderRadius}))?', shorthand: 'tl', type: 'border-radius-top-left'},
+      {body: 'rounded-tr', members: 'rounded\\-tr(\\-(?<value>${borderRadius}))?', shorthand: 'tr', type: 'border-radius-top-right'},
+      {body: 'rounded-bl', members: 'rounded\\-bl(\\-(?<value>${borderRadius}))?', shorthand: 'bl', type: 'border-radius-bottom-left'},
+      {body: 'rounded-br', members: 'rounded\\-br(\\-(?<value>${borderRadius}))?', shorthand: 'br', type: 'border-radius-bottom-right'},
 
       // Outline.
       {members: 'outline\\-offset\\-(?<value>${outlineOffset})', type: 'Outline Offset'},
@@ -326,9 +327,9 @@ const groups = [
       {members: '(translate\\-x\\-(?<value>${translate})|\\-translate\\-x\\-(?<negativeValue>${-translate}))', type: 'translate-x'},
       {members: '(translate\\-y\\-(?<value>${translate})|\\-translate\\-y\\-(?<negativeValue>${-translate}))', type: 'translate-y'},
       {members: '(rotate\\-(?<value>${rotate})|\\-rotate\\-(?<negativeValue>${-rotate}))', type: 'Rotate'},
-      {members: 'scale\\-(?<value>${scale})', type: 'scale'},
-      {members: 'scale\\-x\\-(?<value>${scale})', type: 'scale-x'},
-      {members: 'scale\\-y\\-(?<value>${scale})', type: 'scale-y'},
+      {body: 'scale', members: 'scale\\-(?<value>${scale})|\\-scale\\-(?<negativeValue>${-scale})', shorthand: 'all', type: 'scale'},
+      {body: 'scale-x', members: 'scale\\-x\\-(?<value>${scale})|\\-scale\\-x\\-(?<negativeValue>${-scale})', shorthand: 'x', type: 'scale-x'},
+      {body: 'scale-y', members: 'scale\\-y\\-(?<value>${scale})|\\-scale\\-y\\-(?<negativeValue>${-scale})', shorthand: 'y', type: 'scale-y'},
       {members: '(skew\\-x\\-(?<value>${skew})|\\-skew\\-x\\-(?<negativeValue>${-skew}))', type: 'skew-x'},
       {members: '(skew\\-y\\-(?<value>${skew})|\\-skew\\-y\\-(?<negativeValue>${-skew}))', type: 'skew-y'},
 
@@ -392,10 +393,11 @@ module.exports = {
   plugins: ['tailwindcss'],
 
   rules: {
-    'tailwindcss/classnames-order'          : ['warn', {groupByResponsive: false, groups, prependCustom: true}],
-    'tailwindcss/migration-from-tailwind-2' : ['warn'],
+    'tailwindcss/classnames-order'          : ['error', {groupByResponsive: false, groups, prependCustom: true}],
+    'tailwindcss/enforces-shorthand'        : ['error'],
+    'tailwindcss/migration-from-tailwind-2' : ['error'],
     'tailwindcss/no-contradicting-classname': ['error'],
-    'tailwindcss/no-custom-classname'       : ['warn', {whitelist: ['area-span-full', 'scrollbar-hidden']}],
+    'tailwindcss/no-custom-classname'       : ['error', {whitelist: ['area-span-full', 'scrollbar-hidden']}],
   },
 
   settings: {
