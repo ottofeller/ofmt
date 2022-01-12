@@ -40,7 +40,7 @@ module.exports = {
     'curly'                                             : ['error', 'all'],
     'eol-last'                                          : ['warn'],
     'eqeqeq'                                            : ['error'],
-    'eslint-comments/disable-enable-pair'               : ['error'],
+    'eslint-comments/disable-enable-pair'               : ['error', {'allowWholeFile': true}],
     'eslint-comments/no-aggregating-enable'             : ['error'],
     'eslint-comments/no-duplicate-disable'              : ['error'],
     'eslint-comments/no-unlimited-disable'              : ['error'],
@@ -105,4 +105,3 @@ module.exports = {
     'unicorn/prevent-abbreviations'                     : ['error', {replacements: {dir: false, dirs: false, params: false, props: false}}],
   },
 }
-/* eslint-enable max-len */

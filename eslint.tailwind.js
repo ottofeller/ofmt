@@ -404,4 +404,3 @@ module.exports = {
     tailwindcss: {callees: ['cn']},
   },
 }
-/* eslint-enable max-len, max-lines */
