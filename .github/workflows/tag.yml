@@ -1,0 +1,24 @@
+name: Bump version tag
+on: workflow_dispatch
+  inputs:
+    bump-level:
+      description: Version level to be bumped
+      default: patch
+      required: false
+      type: choice
+      options:
+      - none
+      - patch
+      - minor
+      - major
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ottofeller/create-release-gh-action@main
+      with:
+        initial-version: 0.13.2
+        bump-level: ${{ github.event.inputs.bump-level }}
+        release-branches: master
+        github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -27,8 +27,10 @@
   "author": "ottofeller.com",
   "license": "",
   "scripts": {
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "eslintConfig": {"extends": "./eslint.node.js"},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ottofeller/eslint-config-ottofeller.git"
