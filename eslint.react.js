@@ -5,6 +5,7 @@ module.exports = {
 
   rules: {
     '@ottofeller/ottofeller/jsx-newline-block': ['error'],
+    'jsx-quotes'                              : ['error'],
     'react-hooks/exhaustive-deps'             : ['warn'],
     'react-hooks/rules-of-hooks'              : ['error'],
     'react/destructuring-assignment'          : ['warn', 'never', {ignoreClassFields: true}],
