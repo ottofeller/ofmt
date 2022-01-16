@@ -1,16 +1,18 @@
 name: Bump version tag
-on: workflow_dispatch
-  inputs:
-    bump-level:
-      description: Version level to be bumped
-      default: patch
-      required: false
-      type: choice
-      options:
-      - none
-      - patch
-      - minor
-      - major
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump-level:
+        description: Version level to be bumped
+        default: patch
+        required: false
+        type: choice
+        options:
+        - none
+        - patch
+        - minor
+        - major
 
 jobs:
   create:
