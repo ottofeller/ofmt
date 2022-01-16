@@ -1,4 +1,4 @@
-name: Bump version tag
+name: Bump version and create release
 
 on:
   workflow_dispatch:
@@ -16,6 +16,7 @@ on:
 
 jobs:
   create:
+    name: Bump version and create release
     runs-on: ubuntu-latest
     steps:
     - uses: ottofeller/create-release-gh-action@main
