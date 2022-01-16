@@ -8,6 +8,7 @@ on:
 
 jobs:
   set-commit-hash:
+    name: Store the hash of the commit
     runs-on: ubuntu-latest
     outputs:
       commit_hash: ${{ steps.commit_hash.outputs.commit_hash }}
@@ -29,6 +30,7 @@ jobs:
       run: echo "::set-output name=commit_hash::$(git rev-list -n 1 ${{ steps.latest_release.outputs.tag_name }})"
 
   lint:
+    name: Lint the code
     needs: set-commit-hash
     runs-on: ubuntu-latest
     steps:
@@ -42,6 +44,7 @@ jobs:
         command: npm run lint
 
   publish-npm:
+    name: Publish the release to NPM
     needs: [set-commit-hash, lint]
     runs-on: ubuntu-latest
     steps:
