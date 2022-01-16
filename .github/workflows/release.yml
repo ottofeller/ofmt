@@ -51,5 +51,5 @@ jobs:
       - uses: ottofeller/publish-npm-gh-action@main
         with:
           ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://registry.npmjs.org/
           npm-token: ${{ secrets.NPM_TOKEN }}
