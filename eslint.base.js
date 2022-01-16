@@ -23,6 +23,7 @@ module.exports = {
     '@typescript-eslint/array-type'                     : ['error', {default: 'generic', readOnly: 'generic'}],
     '@typescript-eslint/member-delimiter-style'         : ['error', {multiline: {delimiter: 'none', requireLast: true}, singleline: {delimiter: 'comma', requireLast: false}}],
     '@typescript-eslint/no-duplicate-imports'           : ['error'],
+    '@typescript-eslint/no-explicit-any'                : ['error'],
     '@typescript-eslint/no-extra-parens'                : ['error'],
     '@typescript-eslint/no-extra-semi'                  : ['error'],
     '@typescript-eslint/no-shadow'                      : ['error'],
