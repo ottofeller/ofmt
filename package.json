@@ -8,6 +8,7 @@
     "@typescript-eslint/eslint-plugin": "5.10.1",
     "@typescript-eslint/parser": "5.10.1",
     "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-graphql": "4.0.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-ramda": "2.5.1",
     "eslint-plugin-react": "7.28.0",
@@ -29,7 +30,9 @@
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {"extends": "./eslint.node.js"},
+  "eslintConfig": {
+    "extends": "./eslint.node.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ottofeller/eslint-config-ottofeller.git"
