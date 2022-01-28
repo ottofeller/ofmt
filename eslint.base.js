@@ -17,7 +17,7 @@ module.exports = {
 
   parser       : '@typescript-eslint/parser',
   parserOptions: {ecmaFeatures: {jsx: true}, ecmaVersion: 2020, sourceType: 'module'},
-  plugins      : ['@typescript-eslint', 'eslint-comments', 'fp', 'import', 'ramda', 'unicorn'],
+  plugins      : ['@typescript-eslint', 'eslint-comments', 'import', 'ramda', 'unicorn'],
 
   rules: {
     '@typescript-eslint/array-type'                     : ['error', {default: 'generic', readOnly: 'generic'}],
@@ -49,7 +49,6 @@ module.exports = {
     'eslint-comments/no-unused-enable'                  : ['error'],
     'eslint-comments/no-use'                            : ['error', {'allow': ['eslint-disable', 'eslint-disable-next-line', 'eslint-enable']}],
     'eslint-comments/require-description'               : ['error', {'ignore': ['eslint-enable']}],
-    'fp/no-loops'                                       : ['error'],
     'id-length'                                         : ['error', {exceptions: ['_', 'R', 'x', 'y']}],
     'implicit-arrow-linebreak'                          : ['error', 'beside'],
     'import/no-relative-parent-imports'                 : ['error'],
