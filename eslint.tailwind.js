@@ -398,7 +398,6 @@ const groups = [
 
 module.exports = {
   env    : {browser: true, jest: true, node: false},
-  extends: './eslint.base.js',
   plugins: ['tailwindcss'],
 
   rules: {

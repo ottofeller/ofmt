@@ -1,6 +1,5 @@
 module.exports = {
   env    : {browser: true, jest: true, node: false},
-  extends: './eslint.base.js',
   plugins: ['@ottofeller/ottofeller', 'react-hooks', 'react'],
 
   rules: {
