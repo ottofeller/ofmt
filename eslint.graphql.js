@@ -1,6 +1,6 @@
 /* eslint-disable max-len -- disabling file length limitation for compactness. */
 module.exports = {
-  extends: ['./eslint.base.js'],
+  extends: './eslint.base.js',
   plugins: ['graphql'],
 
   rules: {
