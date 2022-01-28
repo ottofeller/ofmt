@@ -183,7 +183,9 @@ const groups = [
       {members: 'flex\\-(wrap(\\-reverse)?|nowrap)', type: 'Flex Wrap'},
       {members: 'flex\\-(?<value>${flex})', type: 'Flex'},
       {members: 'grow(\\-(?<value>${flexGrow}))?', type: 'Flex Grow'},
+      {deprecated: true, members: 'flex\\-grow(\\-(?<value>${flexGrow}))?', type: 'Deprecated Flex Grow'},
       {members: 'shrink(\\-(?<value>${flexShrink}))?', type: 'Flex Shrink'},
+      {deprecated: true, members: 'flex\\-shrink(\\-(?<value>${flexShrink}))?', type: 'Deprecated Flex Shrink'},
       {members: 'basis\\-(?<value>${flexBasis})', type: 'Flex Basis'},
 
       // Columns.
@@ -210,6 +212,7 @@ const groups = [
       {body: 'border-b', members: 'border\\-b(\\-(?<value>${borderWidth}))?', shorthand: 'b', type: 'border-bottom-width'},
       {members: 'border\\-(solid|dashed|dotted|double|hidden|none)', type: 'Border Style'},
       {body: 'border', members: 'border\\-(?<value>${borderColor})', shorthand: 'all', type: 'border-color'},
+      {deprecated: true, members: 'border\\-opacity\\-(?<value>${borderOpacity})', type: 'Deprecated Border Opacity'},
       {body: 'border-x', members: 'border\\-x\\-(?<value>${borderColor})', shorthand: 'x', type: 'border-x-color'},
       {body: 'border-y', members: 'border\\-y\\-(?<value>${borderColor})', shorthand: 'y', type: 'border-y-color'},
       {body: 'border-l', members: 'border\\-l\\-(?<value>${borderColor})', shorthand: 'l', type: 'border-left-color'},
@@ -239,6 +242,7 @@ const groups = [
 
       // Font.
       {members: 'text\\-(ellipsis|clip)', type: 'Text Overflow'},
+      {deprecated: true, members: 'overflow\\-(ellipsis|clip)', type: 'Deprecated Text Overflow'},
       {members: 'text\\-(left|center|right|justify)', type: 'Text Alignment'},
       {members: '(indent\\-(?<value>${textIndent})|\\-indent\\-(?<negativeValue>${-textIndent}))', type: 'Text Indent'},
       {members: 'align\\-(baseline|top|middle|bottom|text\\-(top|bottom)|sub|super)', type: 'Vertical Alignment'},
@@ -283,6 +287,7 @@ const groups = [
       {members: 'bg\\-(no\\-repeat|repeat(\\-(x|y|round|space))?)', type: 'Background Repeat'},
       {members: 'bg\\-(fixed|local|scroll)', type: 'Background Attachment'},
       {members: 'bg\\-(?<value>${backgroundColor})', type: 'Background Color'},
+      {deprecated: true, members: 'bg\\-opacity\\-(?<value>${backgroundOpacity})', type: 'Deprecated Background Opacity'},
 
       // Accent Color.
       {members: 'accent\\-(?<value>${accentColor})', type: 'Accent Color'},
@@ -309,8 +314,10 @@ const groups = [
 
       // Box-shadow.
       {members: 'box\\-decoration\\-(?<value>clone|slice)', type: 'Box Decoration Break'},
+      {deprecated: true, members: 'decoration\\-(?<value>clone|slice)', type: 'Deprecated Box Decoration Break'},
       {members: 'ring(\\-(?<value>${ringWidth}))?', type: 'ring'},
       {members: 'ring\\-(?<value>${ringColor})', type: 'Ring Color'},
+      {deprecated: true, members: 'ring\\-opacity\\-(?<value>${ringOpacity})', type: 'Deprecated Ring Opacity'},
       {members: 'ring\\-offset\\-(?<value>${ringOffsetWidth})', type: 'Ring Offset Width'},
       {members: 'ring\\-offset\\-(?<value>${ringOffsetColor})', type: 'Ring Offset Color'},
       {members: 'ring\\-inset', type: 'Ring inset'},
@@ -322,6 +329,7 @@ const groups = [
 
       // Transform.
       {members: 'origin\\-(?<value>${transformOrigin})', type: 'Transform Origin'},
+      {deprecated: true, members: 'transform', type: 'Deprecated Transform'},
       {members: 'transform\\-gpu', type: 'transform-gpu'},
       {members: 'transform\\-none', type: 'transform-none'},
       {members: '(translate\\-x\\-(?<value>${translate})|\\-translate\\-x\\-(?<negativeValue>${-translate}))', type: 'translate-x'},
@@ -339,6 +347,7 @@ const groups = [
       {members: 'bg\\-blend\\-(normal|multiply|screen|overlay|darken|lighten|color\\-(dodge|burn)|(hard|soft)\\-light|difference|exclusion|hue|saturation|color|luminosity)', type: 'Background Blend Mode'},
 
       // Filters.
+      {deprecated: true, members: 'filter', type: 'Deprecated Filter'},
       {members: 'blur(\\-(?<value>${blur}))?', type: 'Blur'},
       {members: 'brightness\\-(?<value>${brightness})', type: 'Brightness'},
       {members: 'contrast\\-(?<value>${contrast})', type: 'Contrast'},
