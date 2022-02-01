@@ -402,11 +402,13 @@ module.exports = {
   plugins: ['tailwindcss'],
 
   rules: {
-    'tailwindcss/classnames-order'          : ['error', {groupByResponsive: false, groups, prependCustom: true}],
-    'tailwindcss/enforces-shorthand'        : ['error'],
-    'tailwindcss/migration-from-tailwind-2' : ['error'],
-    'tailwindcss/no-contradicting-classname': ['error'],
-    'tailwindcss/no-custom-classname'       : ['error', {whitelist: ['area-span-full', 'scrollbar-hidden']}],
+    'tailwindcss/classnames-order'                  : ['error', {groupByResponsive: false, groups, prependCustom: true}],
+    'tailwindcss/enforces-negative-arbitrary-values': ['error'],
+    'tailwindcss/enforces-shorthand'                : ['error'],
+    'tailwindcss/migration-from-tailwind-2'         : ['error'],
+    'tailwindcss/no-arbitrary-value'                : ['off'],
+    'tailwindcss/no-contradicting-classname'        : ['error'],
+    'tailwindcss/no-custom-classname'               : ['error', {whitelist: ['area-span-full', 'scrollbar-hidden']}],
   },
 
   settings: {
