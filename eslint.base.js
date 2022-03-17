@@ -38,6 +38,7 @@ module.exports = {
     'arrow-parens'                                      : ['error', 'as-needed'],
     'capitalized-comments'                              : ['error'],
     'comma-dangle'                                      : ['error', {arrays: 'always-multiline', exports: 'always-multiline', functions: 'always-multiline', imports: 'always-multiline', objects: 'always-multiline'}],
+    'comma-spacing'                                     : ['error'],
     'curly'                                             : ['error', 'all'],
     'eol-last'                                          : ['error'],
     'eqeqeq'                                            : ['error'],
