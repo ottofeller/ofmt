@@ -77,6 +77,7 @@ module.exports = {
     'no-unused-expressions'                             : ['off'],
     'no-unused-vars'                                    : ['off'],
     'object-curly-spacing'                              : ['off'],
+    'object-shorthand'                                  : ['error', 'always'],
     'one-var'                                           : ['error', 'never'],
     'one-var-declaration-per-line'                      : ['error', 'always'],
     'padded-blocks'                                     : ['error', 'never'],
