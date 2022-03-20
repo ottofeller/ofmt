@@ -35,6 +35,7 @@ module.exports = {
     '@typescript-eslint/semi'                           : ['error', 'never'],
     '@typescript-eslint/space-before-function-paren'    : ['error', {anonymous: 'always', asyncArrow: 'always', named: 'never'}],
     '@typescript-eslint/space-infix-ops'                : ['error', {int32Hint: false}],
+    '@typescript-eslint/type-annotation-spacing'        : ['error'],
     'arrow-parens'                                      : ['error', 'as-needed'],
     'capitalized-comments'                              : ['error'],
     'comma-dangle'                                      : ['error', {arrays: 'always-multiline', exports: 'always-multiline', functions: 'always-multiline', imports: 'always-multiline', objects: 'always-multiline'}],
