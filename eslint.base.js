@@ -100,6 +100,7 @@ module.exports = {
     'semi'                                              : ['off'],
     'sort-imports'                                      : ['error', {ignoreCase: true, ignoreMemberSort: false, memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']}],
     'sort-keys'                                         : ['error', 'asc', {caseSensitive: false}],
+    'space-before-blocks'                               : ['error', 'always'],
     'space-before-function-paren'                       : ['off'],
     'space-infix-ops'                                   : ['off'],
     'spaced-comment'                                    : ['error', 'always'],
