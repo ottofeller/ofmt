@@ -37,6 +37,7 @@ module.exports = {
     '@typescript-eslint/space-infix-ops'                : ['error', {int32Hint: false}],
     '@typescript-eslint/type-annotation-spacing'        : ['error'],
     'arrow-parens'                                      : ['error', 'as-needed'],
+    'arrow-spacing'                                     : ['error'],
     'brace-style'                                       : ['error', '1tbs', {allowSingleLine: true}],
     'capitalized-comments'                              : ['error'],
     'comma-dangle'                                      : ['error', {arrays: 'always-multiline', exports: 'always-multiline', functions: 'always-multiline', imports: 'always-multiline', objects: 'always-multiline'}],
