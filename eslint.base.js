@@ -105,6 +105,7 @@ module.exports = {
     'space-infix-ops'                                   : ['off'],
     'spaced-comment'                                    : ['error', 'always'],
     'strict'                                            : ['error', 'never'],
+    'switch-colon-spacing'                              : ['error'],
     'unicorn/prevent-abbreviations'                     : ['error', {replacements: {dir: false, dirs: false, params: false, props: false}}],
   },
 }
