@@ -41,6 +41,7 @@ module.exports = {
     'brace-style'                                       : ['error', '1tbs', {allowSingleLine: true}],
     'capitalized-comments'                              : ['error'],
     'comma-dangle'                                      : ['error', {arrays: 'always-multiline', exports: 'always-multiline', functions: 'always-multiline', imports: 'always-multiline', objects: 'always-multiline'}],
+    'comma-spacing'                                     : ['error'],
     'curly'                                             : ['error', 'all'],
     'eol-last'                                          : ['error'],
     'eqeqeq'                                            : ['error'],
@@ -80,6 +81,7 @@ module.exports = {
     'no-unused-expressions'                             : ['off'],
     'no-unused-vars'                                    : ['off'],
     'object-curly-spacing'                              : ['off'],
+    'object-shorthand'                                  : ['error', 'always'],
     'one-var'                                           : ['error', 'never'],
     'one-var-declaration-per-line'                      : ['error', 'always'],
     'padded-blocks'                                     : ['error', 'never'],
@@ -107,6 +109,6 @@ module.exports = {
     'spaced-comment'                                    : ['error', 'always'],
     'strict'                                            : ['error', 'never'],
     'switch-colon-spacing'                              : ['error'],
-    'unicorn/prevent-abbreviations'                     : ['error', {replacements: {dir: false, dirs: false, params: false, props: false}}],
+    'unicorn/prevent-abbreviations'                     : ['error', {replacements: {dir: false, dirs: false, ex: {error: true, exception: true}, params: false, props: false}}],
   },
 }
