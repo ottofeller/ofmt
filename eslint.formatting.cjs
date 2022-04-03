@@ -34,7 +34,6 @@ module.exports = {
     'indent'                                            : ['error', 2, {ArrayExpression: 1, CallExpression: {arguments: 1}, FunctionExpression: {parameters: 1}, MemberExpression: 1, ObjectExpression: 1, VariableDeclarator: 0}],
     'key-spacing'                                       : ['error', {afterColon: true, align: 'colon'}],
     'keyword-spacing'                                   : ['error', {after: false, before: false, overrides: {as: {after: true, before: true}, catch: {after: false, before: true}, const: {after: true, before: false}, default: {after: true, before: true}, else: {after: true, before: true}, export: {after: true, before: false}, finally: {after: true, before: true}, from: {after: true, before: true}, import: {after: true, before: false}, let: {after: true, before: false}, of: {after: true, before: true}, return: {after: true, before: false}, try: {after: true, before: false}, var: {after: true, before: false}}}],
-    'max-len'                                           : ['error', {code: 120, ignoreComments: true, ignoreUrls: true, tabWidth: 2}],
     'no-alert'                                          : ['error'],
     'no-debugger'                                       : ['error'],
     'no-extra-parens'                                   : ['off'],
@@ -57,6 +56,9 @@ module.exports = {
     'space-infix-ops'                                   : ['off'],
     'strict'                                            : ['error', 'never'],
     'switch-colon-spacing'                              : ['error'],
+
+    // This is the only rule which can not be fixed automatically. For the purpose of fixing it we are using prettier
+    'max-len': ['error', {code: 120, ignoreComments: true, ignoreUrls: true, tabWidth: 2}],
 
     // React specific rules
     'jsx-quotes'                    : ['error'],
