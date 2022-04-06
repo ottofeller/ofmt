@@ -9,31 +9,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const execAsync = util.promisify(exec)
 
 void async function () {
-  // ANCHOR Parse arguments
   const args = meow({
     importMeta: import.meta,
     flags     : {'lint': {type: 'boolean', alias: 'l'}},
   })
 
-  // ANCHOR Run prettier with default options
-  if(!args.flags.lint) {
-    await execAsync(`npx prettier --write --print-width 120 ${args.input}`)
+  const prettierOptions = ```
+    --print-width 120
+    --tab-width 2
+    --no-semi
+    --single-quote
+    --quote-props as-needed
+    --trailing-comma all
+    --no-bracket-spacing
+    --arrow-parens always
+```
+
+  if(args.flags.lint) {
+    await execAsync(`npx prettier --check ${prettierOptions} ${args.input}`)
   }
 
-  // ANCHOR Run eslint
-  const eslint = new ESLint({
-    fix               : !args.flags.lint,
-    extensions        : ['.js', '.jsx', '.ts', '.tsx'],
-    overrideConfigFile: `${__dirname}/../eslint.formatting.cjs`,
-    useEslintrc       : false,
-  })
-
-  const results = await eslint.lintFiles(args.input)
-
   if(!args.flags.lint) {
-    await ESLint.outputFixes(results)
+    await execAsync(`npx prettier --write ${prettierOptions} ${args.input}`)
   }
-
-  const formatter = await eslint.loadFormatter('stylish')
-  console.log(formatter.format(results))
 }()
