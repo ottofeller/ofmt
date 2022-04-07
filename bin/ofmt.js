@@ -15,7 +15,6 @@ void (async function () {
 
   if (args.flags.lint) {
     await execAsync(`npx prettier --check ${prettierOptions} ${args.input}`)
-    return
   }
 
   if (!args.flags.lint) {
