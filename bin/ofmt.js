@@ -2,8 +2,6 @@
 import {exec} from 'child_process'
 import meow from 'meow'
 import util from 'util'
-
-
 const execAsync = util.promisify(exec)
 
 void (async function () {
