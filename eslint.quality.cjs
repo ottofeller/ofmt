@@ -1,4 +1,3 @@
-/* eslint-disable max-len -- disabling file length limitation for compactness. */
 module.exports = {
   env    : {browser: true, jest: true, node: true},
   extends: ['plugin:import/typescript'],
