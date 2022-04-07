@@ -1,11 +1,7 @@
 #!/usr/bin/env node
-import {ESLint} from 'eslint'
 import {exec} from 'child_process'
-import {fileURLToPath} from 'url'
 import meow from 'meow'
-import path from 'path'
 import util from 'util'
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const execAsync = util.promisify(exec)
 
 void async function () {
