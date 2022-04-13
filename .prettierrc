@@ -1,0 +1,21 @@
+printWidth: 120
+tabWidth: 2 # Default
+useTabs: false # Default
+semi: false
+singleQuote: true
+quoteProps: as-needed # Default
+jsxSingleQuote: false # Default
+trailingComma: all
+bracketSpacing: false
+bracketSameLine: false # Default
+arrowParens: always # Default
+rangeStart: 0 # Default
+rangeEnd: .inf # Default
+requirePragma: false # Default
+insertPragma: false # Default
+proseWrap: preserve # Default
+htmlWhitespaceSensitivity: css # Default
+vueIndentScriptAndStyle: false # Default
+endOfLine: lf
+embeddedLanguageFormatting: auto # Default
+singleAttributePerLine: false # Default
