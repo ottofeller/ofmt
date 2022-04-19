@@ -15,16 +15,17 @@ export const install = (refDirRaw = process.env.INIT_CWD) => {
 
   // ANCHOR 1. Create symlink to .prettierrc
   const prettierrcFilename = '.prettierrc'
-  const prettierrcPath = path.join(ofmtRoot, '..', prettierrcFilename)
+  const prettierrcPath = path.join(ofmtRoot, prettierrcFilename)
   const prettierrcTargetPath = path.join(refDir, prettierrcFilename)
-  const prettierrcTargetPathStats = fs.statSync(prettierrcTargetPath, {throwIfNoEntry: false})
+  const prettierrcTargetPathExists = fs.existsSync(prettierrcTargetPath)
 
-  if (!prettierrcTargetPathStats) {
-    // NOTE: statSync returns undefined for symlinks. Thus symlinkSync can still fail if a symlink exists.
-    try {
-      fs.symlinkSync(prettierrcPath, prettierrcTargetPath, 'file')
-      console.log(`Added new prettier config to your project in "${prettierrcFilename}" file.`)
-    } catch {}
+  if (prettierrcTargetPathExists) {
+    console.log(`"${prettierrcFilename}" file exists in your project. Remove it if you want the one from "ofmt" installed.`)
+  }
+
+  if (!prettierrcTargetPathExists) {
+    fs.symlinkSync(prettierrcPath, prettierrcTargetPath)
+    console.log(`Added new prettier config to your project in "${prettierrcFilename}" file.`)
   }
 
   // ANCHOR 2. Add "eslint.quality.cjs" to extends of eslint config within package.json
