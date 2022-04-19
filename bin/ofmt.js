@@ -10,6 +10,11 @@ const args = meow({
   flags: {lint: {type: 'boolean', alias: 'l'}},
 })
 
+if (args.input[0] === 'install') {
+  install(args.input[1])
+  process.exit(0)
+}
+
 const checkOrWrite = args.flags.lint ? 'check' : 'write'
 const configPath = path.resolve(__dirname, '../.prettierrc')
 exec(`npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`, console.log)
