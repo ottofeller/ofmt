@@ -20,8 +20,11 @@ export const install = (refDirRaw = process.env.INIT_CWD) => {
   const prettierrcTargetPathStats = fs.statSync(prettierrcTargetPath, {throwIfNoEntry: false})
 
   if (!prettierrcTargetPathStats) {
-    fs.symlinkSync(prettierrcPath, prettierrcTargetPath, 'file')
-    console.log(`Added new prettier config to your project in "${prettierrcFilename}" file.`)
+    // NOTE: statSync returns undefined for symlinks. Thus symlinkSync can still fail if a symlink exists.
+    try {
+      fs.symlinkSync(prettierrcPath, prettierrcTargetPath, 'file')
+      console.log(`Added new prettier config to your project in "${prettierrcFilename}" file.`)
+    } catch {}
   }
 
   // ANCHOR 2. Add "eslint.quality.cjs" to extends of eslint config within package.json

@@ -3,6 +3,7 @@ import {exec} from 'child_process'
 import meow from 'meow'
 import {fileURLToPath} from 'url'
 import path from 'path'
+import {install} from './install.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const args = meow({
