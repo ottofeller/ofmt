@@ -1,6 +1,7 @@
-# OFMT
+# OFMT is a formatting and linting tool
 
-This repository contain code formatter for Ottofeller projects.
+* **Formatting** is done solely by prettier. It is completely automated, and not configurable in any way other than changing the [`.prettierrc`](https://github.com/quesabe/ofmt/blob/add-readme/package.json) of this repo, and republishing the package.
+* **Linting** is not related to formatting in any way. The goal of linting is to catch early code quality issues, and enforce usage of best practices.
 
 ## Install
 
