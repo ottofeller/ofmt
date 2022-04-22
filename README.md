@@ -11,10 +11,10 @@ npm install @ottofeller/ofmt --save-dev
 
 ## Configs
 
-The project contains the following formatting configs:
-- `.prettierrc` with basic code formatting rules
-- `eslint.quality.cjs` with JS/TS-specific code style and quality rules
-- `eslint.tailwind.cjs` with CSS-specific code style and quality rules
+The project contains the following configs:
+- `.prettierrc` formatting rules
+- `eslint.quality.cjs` with JS/TS-specific code quality and best practices rules
+- `eslint.tailwind.cjs` same as above, CSS-specific
 
 Direct use of configs is meant only for IDE support. For CLI runs use the provided executables.
 
