@@ -21,13 +21,13 @@ Direct use of configs is meant only for IDE support. For CLI runs use the provid
 ## Executables
 
 There are two _bin_ files that perform the code checking:
-- `ofmt` - installer/prettier formatter
-- `olint` - eslint formatter
+- `ofmt` - prettier formatter
+- `olint` - code quality and best practices linter.
 
 ### ofmt
 
 #### Options:
-- `-l` - a flag to perform checking only. Without the flag prettier will rewrite files with fixed formatting.
+- `-l, --lint` - a flag to perform checking only. Without the flag prettier will rewrite files with fixed formatting.
 - _non-flag_ - the prettier target files. This can contain any of file paths, directory paths, and glob patterns.
 - `install` - a non-flag argument that creates a symlink to prettier config file and adds/extends eslint config within _package.json_. The second argument is the destination path.\
 NOTE: the `install` script does not attempt to overwrite existing `prettier` config - if a _.prettierrc_ file exists it is left as is. An existing `eslint` config is extended with _eslint.quality.cjs_.
