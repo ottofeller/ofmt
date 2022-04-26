@@ -18,6 +18,7 @@
     "meow": "10.1.2"
   },
   "devDependencies": {
+    "@ottofeller/eslint-config-ofmt": "1.1.5",
     "@types/node": "17.0.23",
     "eslint-plugin-eslint-comments": "3.2.0",
     "typescript": "4.5.5"
