@@ -22,7 +22,7 @@ export const install = (refDirRaw = process.env.INIT_CWD) => {
     () => { console.log('Done!'); process.exit(0) },
   )
 
-  // ANCHOR 1. Create symlink to .prettierrc
+  // ANCHOR 1. Point the ofmt prettier config
   packageJson.prettier = '@ottofeller/prettier-config-ofmt'
 
   // ANCHOR 2. Add "eslint.quality.cjs" to extends of eslint config within package.json
