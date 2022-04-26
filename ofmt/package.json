@@ -1,0 +1,47 @@
+{
+  "name": "@ottofeller/ofmt",
+  "version": "1.1.0",
+  "description": "Autoformatter built for OttoFeller projects",
+  "bin": {
+    "ofmt": "./bin/ofmt.js",
+    "olint": "./bin/olint.js"
+  },
+  "dependencies": {
+    "@ottofeller/eslint-plugin-ottofeller": "0.1.3",
+    "@typescript-eslint/eslint-plugin": "5.10.2",
+    "@typescript-eslint/parser": "5.10.2",
+    "eslint": ">= 8",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-tailwindcss": "3.4.3",
+    "meow": "10.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.23",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "typescript": "4.5.5"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8",
+    "typescript": ">= 4"
+  },
+  "author": "ottofeller.com",
+  "license": "",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "extends": "./eslint.quality.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottofeller/eslint-config-ottofeller.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ottofeller/eslint-config-ottofeller/issues"
+  },
+  "homepage": "https://github.com/ottofeller/eslint-config-ottofeller#readme",
+  "type": "module"
+}

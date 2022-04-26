@@ -17,7 +17,7 @@ module.exports = {
 
   parser       : '@typescript-eslint/parser',
   parserOptions: {ecmaFeatures: {jsx: true}, ecmaVersion: 2020, sourceType: 'module'},
-  plugins      : ['@typescript-eslint', 'eslint-comments', 'import', '@ottofeller/ottofeller', 'react-hooks', 'react'],
+  plugins      : ['@typescript-eslint', 'eslint-comments', 'import', 'react-hooks', 'react', '@ottofeller/ottofeller'],
   settings     : {react: {pragma: 'React', version: '17'}},
 
   // Static analysis and code quality
@@ -44,6 +44,6 @@ module.exports = {
     'react/jsx-key'                                          : ['error', {checkFragmentShorthand: true}],
     'react/jsx-uses-vars'                                    : ['error'],
     'react/prefer-stateless-function'                        : ['error'],
-    '@ottofeller/ottofeller/require-comment-before-useeffect': ['error'],
+    '@ottofeller/ottofeller/require-comment-before-useeffect': ['error']
   },
 }

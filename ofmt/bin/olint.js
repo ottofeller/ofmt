@@ -13,7 +13,7 @@ void (async function () {
   const eslint = new ESLint({
     fix: false,
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    overrideConfigFile: `${__dirname}/../eslint.quality.cjs`,
+    overrideConfigFile: '@ottofeller/eslint-config-ofmt/eslint.quality.cjs',
     useEslintrc: false,
   })
 

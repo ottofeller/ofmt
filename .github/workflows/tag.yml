@@ -25,3 +25,8 @@ jobs:
         bump-level: ${{ github.event.inputs.bump-level }}
         release-branches: master
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        update-children-path: |
+          eslint-config-ofmt
+          prettier-config-ofmt
+          ofmt
+        update-children-bump-level: ${{ github.event.inputs.bump-level }}
