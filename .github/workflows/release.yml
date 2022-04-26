@@ -31,14 +31,19 @@ jobs:
       with:
         node-version: 16
         command: npm run lint
+        directory: ./ofmt
 
   publish-npm:
     name: Publish the release to NPM
     needs: [set-commit-hash, lint]
     runs-on: ubuntu-latest
     steps:
-      - uses: ottofeller/github-actions/publish-npm@main
-        with:
-          ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
-          registry-url: https://registry.npmjs.org/
-          npm-token: ${{ secrets.NPM_TOKEN }}
+      - name: Publish @ottofeller/ofmt
+        run: npm publish --access ${{ inputs.access }}
+        working-directory: ./ofmt
+      - name: Publish @ottofeller/eslint-config-ofmt
+        run: npm publish --access ${{ inputs.access }}
+        working-directory: ./eslint-config-ofmt
+      - name: Publish @ottofeller/prettier-config-ofmt
+        run: npm publish --access ${{ inputs.access }}
+        working-directory: ./prettier-config-ofmt
