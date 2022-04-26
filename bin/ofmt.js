@@ -3,7 +3,7 @@ import {exec} from 'child_process'
 import meow from 'meow'
 import {fileURLToPath} from 'url'
 import path from 'path'
-import {install} from './install.js'
+import {install} from '../lib/install.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const args = meow({
@@ -12,7 +12,7 @@ const args = meow({
 })
 
 if (args.input[0] === 'install') {
-  install(args.input[1])
+  install(args.input[1] || './')
   process.exit(0)
 }
 
