@@ -13,9 +13,8 @@ const args = meow({
 
 if (args.input[0] === 'install') {
   install(args.input[1] || './')
-  process.exit(0)
+} else {
+  const checkOrWrite = args.flags.lint ? 'check' : 'write'
+  const configPath = path.resolve(__dirname, '../../prettier-config-ofmt/index.json')
+  exec(`npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`, console.log)
 }
-
-const checkOrWrite = args.flags.lint ? 'check' : 'write'
-const configPath = path.resolve(__dirname, '../.prettierrc')
-exec(`npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`, console.log)

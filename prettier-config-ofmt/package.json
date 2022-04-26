@@ -1,0 +1,16 @@
+{
+  "name": "@ottofeller/prettier-config-ofmt",
+  "version": "1.1.0",
+  "description": "Prettier config file for @ottofeller/ofmt",
+  "author": "ottofeller.com",
+  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottofeller/ofmt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ottofeller/ofmt/issues"
+  },
+  "homepage": "https://github.com/ottofeller/ofmt#readme",
+  "type": "module"
+}
