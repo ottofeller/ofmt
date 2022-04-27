@@ -1,6 +1,6 @@
 {
   "name": "@ottofeller/ofmt",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Autoformatter built for OttoFeller projects",
   "bin": {
     "ofmt": "./bin/ofmt.js",
