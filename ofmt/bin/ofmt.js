@@ -3,7 +3,10 @@ import {exec} from 'child_process'
 import meow from 'meow'
 import {fileURLToPath} from 'url'
 import path from 'path'
+
+// eslint-disable-next-line import/no-relative-parent-imports -- Can't add a path in an easy way at the moment
 import {install} from '../lib/install.js'
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const args = meow({

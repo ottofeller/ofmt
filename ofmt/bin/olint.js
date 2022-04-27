@@ -1,9 +1,6 @@
 #!/usr/bin/env node
-import {fileURLToPath} from 'url'
 import {ESLint} from 'eslint'
 import meow from 'meow'
-import path from 'path'
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 void (async function () {
   const args = meow({
