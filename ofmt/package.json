@@ -32,7 +32,7 @@
   "license": "",
   "scripts": {
     "format": "node ./bin/ofmt.js 'bin lib'",
-    "lint": "npm run prettier -- --lint && node ./bin/olint.js bin/*.js lib/*.js"
+    "lint": "npm run format -- --lint && node ./bin/olint.js bin/*.js lib/*.js"
   },
   "eslintConfig": {
     "extends": "@ottofeller/eslint-config-ofmt/eslint.quality.cjs"
