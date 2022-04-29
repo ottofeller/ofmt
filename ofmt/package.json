@@ -31,7 +31,7 @@
   "author": "ottofeller.com",
   "license": "",
   "scripts": {
-    "prettier": "node ./bin/ofmt.js 'bin lib'",
+    "format": "node ./bin/ofmt.js 'bin lib'",
     "lint": "npm run prettier -- --lint && node ./bin/olint.js bin/*.js lib/*.js"
   },
   "eslintConfig": {
