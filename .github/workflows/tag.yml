@@ -29,4 +29,7 @@ jobs:
           eslint-config-ofmt
           prettier-config-ofmt
           ofmt
-        update-children-bump-level: ${{ github.event.inputs.bump-level }}
+        update-children-bump-level: |
+          ${{ github.event.inputs.bump-level }}
+          ${{ github.event.inputs.bump-level }}
+          ${{ github.event.inputs.bump-level }}

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import eslintConfigOfmt from '@ottofeller/eslint-config-ofmt/eslint.quality.cjs'
 import {ESLint} from 'eslint'
 import meow from 'meow'
 
@@ -10,7 +11,7 @@ void (async function () {
   const eslint = new ESLint({
     fix: false,
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    overrideConfigFile: '@ottofeller/eslint-config-ofmt/eslint.quality.cjs',
+    overrideConfig: eslintConfigOfmt,
     useEslintrc: false,
   })
 

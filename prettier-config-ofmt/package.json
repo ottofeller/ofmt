@@ -12,5 +12,6 @@
     "url": "https://github.com/ottofeller/ofmt/issues"
   },
   "homepage": "https://github.com/ottofeller/ofmt#readme",
-  "type": "module"
+  "type": "module",
+  "main": "index.json"
 }
