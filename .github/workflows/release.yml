@@ -38,6 +38,10 @@ jobs:
     needs: [set-commit-hash, lint]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
       - name: Publish @ottofeller/ofmt
         run: npm publish --access ${{ inputs.access }}
         working-directory: ./ofmt
