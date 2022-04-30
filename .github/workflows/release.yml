@@ -44,6 +44,11 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
       - name: Publish @ottofeller/ofmt
         run: npm publish --access public
         working-directory: ./ofmt
