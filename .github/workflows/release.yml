@@ -37,17 +37,19 @@ jobs:
     name: Publish the release to NPM
     needs: [set-commit-hash, lint]
     runs-on: ubuntu-latest
+    env: 
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
           ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
       - name: Publish @ottofeller/ofmt
-        run: npm publish --access ${{ inputs.access }}
+        run: npm publish --access public
         working-directory: ./ofmt
       - name: Publish @ottofeller/eslint-config-ofmt
-        run: npm publish --access ${{ inputs.access }}
+        run: npm publish --access public
         working-directory: ./eslint-config-ofmt
       - name: Publish @ottofeller/prettier-config-ofmt
-        run: npm publish --access ${{ inputs.access }}
+        run: npm publish --access public
         working-directory: ./prettier-config-ofmt
