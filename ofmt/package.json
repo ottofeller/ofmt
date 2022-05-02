@@ -13,16 +13,15 @@
     "@typescript-eslint/eslint-plugin": "5.10.2",
     "@typescript-eslint/parser": "5.10.2",
     "eslint": ">= 8",
-    "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
     "eslint-plugin-tailwindcss": "3.4.3",
-    "meow": "10.1.2",
-    "prettier-plugin-organize-imports": "^2.3.4"
+    "meow": "10.1.2"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
+    "eslint-plugin-eslint-comments": "3.2.0",
     "typescript": "4.5.5"
   },
   "peerDependencies": {
