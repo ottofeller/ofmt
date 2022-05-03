@@ -19,7 +19,7 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "eslint-plugin-tailwindcss": "3.4.3",
     "meow": "10.1.2",
-    "prettier-plugin-organize-imports": "^2.3.4"
+    "prettier-plugin-organize-imports": "2.3.4"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
