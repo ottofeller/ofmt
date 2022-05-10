@@ -13,7 +13,13 @@ const packageRoot = path.resolve(__dirname, '..')
 const prettierConfigPath = [
   'node_modules/@ottofeller/prettier-config-ofmt/index.json', // Path within this package.
   '../prettier-config-ofmt/index.json', // Path within another package, where 'ofmt' is installed as a dependency.
-].find((filePath) => statSync(path.resolve(packageRoot, filePath), {throwIfNoEntry: false}))
+].find((filePath) => {
+  try {
+    return statSync(path.resolve(packageRoot, filePath))
+  } catch {
+    return
+  }
+})
 
 if (!prettierConfigPath) {
   console.error('Prettier config file is nod found. Please install "@ottofeller/prettier-config-ofmt".')
