@@ -16,7 +16,8 @@ const prettierConfigPath = [
 ].find((filePath) => {
   try {
     return statSync(path.resolve(packageRoot, filePath))
-  } catch {
+  } catch(error) {
+    console.error(error)
     return
   }
 })
