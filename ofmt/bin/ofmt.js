@@ -38,5 +38,5 @@ if (args.input[0] === 'install') {
 } else {
   const checkOrWrite = args.flags.lint ? 'check' : 'write'
   const configPath = path.resolve(packageRoot, prettierConfigPath)
-  exec(`npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`, console.log)
+  exec(`npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`, (error) => error && console.log(error))
 }
