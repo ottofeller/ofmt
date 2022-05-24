@@ -18,4 +18,10 @@ void (async function () {
   const results = await eslint.lintFiles(args.input)
   const formatter = await eslint.loadFormatter('stylish')
   console.log(formatter.format(results))
+
+  const totalErrorCount = results.reduce((acc, result) => acc + result.errorCount, 0)
+
+  if (totalErrorCount > 0) {
+    process.exit(1)
+  }
 })()
