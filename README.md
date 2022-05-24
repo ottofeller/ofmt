@@ -11,7 +11,7 @@ npm install @ottofeller/ofmt --save-dev
 ```
 
 The package implements an `install` command that copies `prettier` and `eslint` configs to your project - it creates a symlink to `prettier` config file and adds/extends `eslint` config within _package.json_. See the [Examples](#examples) sections for usage details.\
-NOTE: the `install` script does not attempt to overwrite existing `prettier` config - if a _.prettierrc_ file exists it is left as is. An existing `eslint` config is extended with _eslint.quality.cjs_.
+> 💡 The `install` script does not attempt to overwrite existing `prettier` config - if a _.prettierrc_ file exists it is left as is. An existing `eslint` config is extended with _eslint.quality.cjs_.
 
 ## Configs
 
@@ -31,7 +31,7 @@ There are two _bin_ files that perform the code checking:
 
 ## Examples:
 
-NOTE: The examples below use shorthand executable name as registered in _PATH_ by `npm` - available only if the package is installed in the project or in upper scopes on the search path of `npm`. If the `@ottofeller/ofmt` is not installed append with the package name:\
+> 💡 The examples below use shorthand executable name as registered in _PATH_ by `npm` - available only if the package is installed in the project or in upper scopes on the search path of `npm`. If the `@ottofeller/ofmt` is not installed append with the package name:\
 ```bash
 npx -p @ottofeller/ofmt [ofmt|olint] ...
 ```
