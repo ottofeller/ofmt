@@ -10,7 +10,7 @@ Use the following command to instal the package as a dev dependency:
 npm install @ottofeller/ofmt --save-dev
 ```
 
-The package implements an `install` command that copies `prettier` and `eslint` configs to your project - it creates a symlink to `prettier` config file and adds/extends `eslint` config within _package.json_. See the [Examples](#examples) sections for usage details.\
+The package implements an `install` command that copies `prettier` and `eslint` configs to your project - it creates a symlink to `prettier` config file and adds/extends `eslint` config within _package.json_. See the [Examples](#examples) sections for usage details.
 > 💡 The `install` script does not attempt to overwrite existing `prettier` config - if a _.prettierrc_ file exists it is left as is. An existing `eslint` config is extended with _eslint.quality.cjs_.
 
 ## Configs
