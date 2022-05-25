@@ -5,20 +5,32 @@
 
 ## Install
 
-Use the following command to instal the package as a dev dependency:
+Use the following command to install the package as a dev dependency:
 ```shell
-npm install @ottofeller/ofmt --save-dev
+npm install @ottofeller/ofmt --save-dev --save-exact
 ```
 
-The package implements an `install` command that copies `prettier` and `eslint` configs to your project - it creates a symlink to `prettier` config file and adds/extends `eslint` config within _package.json_. See the [Examples](#examples) sections for usage details.
-> 💡 The `install` script does not attempt to overwrite existing `prettier` config - if a _.prettierrc_ file exists it is left as is. An existing `eslint` config is extended with _eslint.quality.cjs_.
+Then the following command is used to install `prettier` and `eslint` configs as dev dependencies:
+```shell
+npx ofmt install
+```
+
+The latter command on `ofmt` executable does:
+- install `@ottofeller/prettier-config-ofmt` package;
+- install `@ottofeller/eslint-config-ofmt` package;
+- add the configs to _package.json_ (`prettier` and `eslintConfig` fields).
+
+> 💡 For existing `prettier` and `eslintConfig` fields in the _package.json_ file:
+> - `prettier` field is overwritten;
+> - `eslintConfig` filed is extended with _eslint.quality.cjs_.
 
 ## Configs
 
-The project contains the following configs:
-- `.prettierrc` formatting rules
-- `eslint.quality.cjs` with JS/TS-specific code quality and best practices rules
-- `eslint.tailwind.cjs` same as above, CSS-specific
+The project utilizes the following config packages (located within the same repo):
+- `@ottofeller/prettier-config-ofmt` package with formatting rules;
+- `@ottofeller/eslint-config-ofmt` package containing:
+  - `eslint.quality.cjs` with JS/TS-specific code quality and best practices rules
+  - `eslint.tailwind.cjs` same as above, CSS-specific
 
 Direct use of configs is meant only for IDE support. For CLI runs use the provided executables.
 
@@ -31,7 +43,7 @@ There are two _bin_ files that perform the code checking:
 
 ## Examples:
 
-> 💡 The examples below use shorthand executable name as registered in _PATH_ by `npm` - available only if the package is installed in the project or in upper scopes on the search path of `npm`. If the `@ottofeller/ofmt` is not installed append with the package name:\
+> 💡 The examples below use shorthand executable name as registered in _PATH_ by `npm` - available only if the package is installed in the project or in upper scopes on the search path of `npm`. If the `@ottofeller/ofmt` is not installed append with the package name:
 ```bash
 npx -p @ottofeller/ofmt [ofmt|olint] ...
 ```
