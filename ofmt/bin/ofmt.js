@@ -36,7 +36,7 @@ const args = meow({
 if (args.input[0] === 'install') {
   install(args.input[1] || './')
 } else {
-  const checkOrWrite = args.flags.lint ? 'check' : 'write'
+  const checkOrWrite = args.flags.lint ? 'check' : 'write --list-different'
   const configPath = path.resolve(packageRoot, prettierConfigPath)
   exec(`npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`, (error, stdout, stderr) => {
     console.log(stdout)
