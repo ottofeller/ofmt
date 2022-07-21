@@ -3,7 +3,15 @@ import fs from 'fs'
 import path from 'path'
 import {fileURLToPath} from 'url'
 
-export const install = (refDirRaw = process.env.INIT_CWD) => {
+/**
+ * Install 'ofmt` to a project:
+ * - install eslint and prettier configs;
+ * - add eslint and prettier configs to package.json;
+ * - add `format` and `lint` scripts to package.json.
+ * @param {string} refDirRaw
+ * @param {string} srcPath
+ */
+export const install = (refDirRaw, srcPath) => {
   const __dirname = path.dirname(fileURLToPath(import.meta.url))
   const ofmtRoot = path.resolve(__dirname, '..')
   const refDir = path.resolve(refDirRaw)
@@ -58,6 +66,24 @@ export const install = (refDirRaw = process.env.INIT_CWD) => {
       reportExtension()
     }
   }
+
+  // ANCHOR 4. Add "format" and "lint" scripts to the package.json
+  const scripts = {
+    format: `ofmt ${srcPath}`,
+    lint: `ofmt --lint ${srcPath} && olint ${srcPath}`,
+  }
+
+  if (!packageJson.scripts) {
+    packageJson.scripts = {}
+  }
+
+  Object.entries(scripts).forEach(([name, command]) => {
+    if (packageJson.scripts[name]) {
+      console.warn(`Script "${name}" already exists in your package.json.`)
+    } else {
+      packageJson.scripts[name] = command
+    }
+  })
 
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
 }

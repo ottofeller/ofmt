@@ -19,10 +19,13 @@ The latter command on `ofmt` executable does:
 - install `@ottofeller/prettier-config-ofmt` package;
 - install `@ottofeller/eslint-config-ofmt` package;
 - add the configs to _package.json_ (`prettier` and `eslintConfig` fields).
+- add `format` and `lint` scripts to _package.json_.
 
 > 💡 For existing `prettier` and `eslintConfig` fields in the _package.json_ file:
 > - `prettier` field is overwritten;
 > - `eslintConfig` filed is extended with _eslint.quality.cjs_.
+>
+> 💡 For existing `format` or `lint` script in the _package.json_ file warns and leave the script untouched.
 
 ## Configs
 
@@ -37,8 +40,9 @@ Direct use of configs is meant only for IDE support. For CLI runs use the provid
 ## Executables
 
 There are two _bin_ files that perform the code checking:
-- `ofmt` - prettier formatter. A single option is available:\
+- `ofmt` - prettier formatter. Two options are available:\
   `-l, --lint` - a flag to perform checking only. Without the flag `prettier` will rewrite files with fixed formatting.
+  `-p, --src-path` - defines search path for source code within `format` and `lint` scripts (the scripts added to a project upon installation). Defaults to `./src`. Used only with `install` command.
 - `olint` - code quality and best practices linter.
 
 ## Examples:
@@ -61,6 +65,9 @@ npx ofmt './src/**/*.ts'
 #### Install `prettier` and `eslint` configs to your project
 ```bash
 npx ofmt install .
+```
+```bash
+npx ofmt install . -p "client server"
 ```
 NOTE: if run as _npm-script_ the path will be inferred:
 ```json
