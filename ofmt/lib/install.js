@@ -79,7 +79,7 @@ export const install = (refDirRaw, srcPath) => {
 
   Object.entries(scripts).forEach(([name, command]) => {
     if (packageJson.scripts[name]) {
-      console.log(`Script "${name}" already exists in your package.json.`)
+      console.warn(`Script "${name}" already exists in your package.json.`)
     } else {
       packageJson.scripts[name] = command
     }
