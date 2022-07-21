@@ -24,7 +24,7 @@ The latter command on `ofmt` executable does:
 > 💡 For existing `prettier` and `eslintConfig` fields in the _package.json_ file:
 > - `prettier` field is overwritten;
 > - `eslintConfig` filed is extended with _eslint.quality.cjs_.
->
+
 > 💡 For existing `format` or `lint` script in the _package.json_ file warns and leave the script untouched.
 
 ## Configs
