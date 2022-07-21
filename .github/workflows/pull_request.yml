@@ -10,16 +10,11 @@ on:
 jobs:
   lint:
     name: Lint the code
-    needs: set-commit-hash
     runs-on: ubuntu-latest
     strategy:
       matrix:
         version: [12, 16]
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-        ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
     - uses: ottofeller/github-actions/npm-run@main
       with:
         node-version: ${{ matrix.version }}
