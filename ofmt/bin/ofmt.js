@@ -30,11 +30,14 @@ if (!prettierConfigPath) {
 
 const args = meow({
   importMeta: import.meta,
-  flags: {lint: {type: 'boolean', alias: 'l'}},
+  flags: {
+    lint: {type: 'boolean', alias: 'l'},
+    srcPath: {type: 'string', alias: 'p', default: './src'},
+  },
 })
 
 if (args.input[0] === 'install') {
-  install(args.input[1] || './')
+  install(args.input[1] || './', args.flags.srcPath)
 } else {
   const checkOrWrite = args.flags.lint ? 'check' : 'write --list-different'
   const configPath = path.resolve(packageRoot, prettierConfigPath)
