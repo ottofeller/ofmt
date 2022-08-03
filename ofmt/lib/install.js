@@ -54,12 +54,14 @@ export const install = (refDirRaw, srcPath) => {
   if (packageJson.eslintConfig && packageJson.eslintConfig.extends) {
     const existingConfig = packageJson.eslintConfig.extends
 
+    // TODO: This disable directive remains for compatibility with the previous config. Delete when settled.
     // eslint-disable-next-line max-depth -- allow depth 2 for cleaner conditions
     if (Array.isArray(existingConfig) && !existingConfig.includes(eslintConfigPath)) {
       packageJson.eslintConfig.extends.push(eslintConfigPath)
       reportExtension()
     }
 
+    // TODO: This disable directive remains for compatibility with the previous config. Delete when settled.
     // eslint-disable-next-line max-depth -- allow depth 2 for cleaner conditions
     if (!Array.isArray(existingConfig) && existingConfig !== eslintConfigPath) {
       packageJson.eslintConfig.extends = [existingConfig, eslintConfigPath]
