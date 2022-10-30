@@ -1,4 +1,10 @@
 /**
+ * @file Represents an eslint config used only for formatting purpose.
+ * The eslint run with the config is meant for supplementing prettier formatting.
+ * It should never include static analysis rules.
+ */
+
+/**
  * @type {import('eslint').Linter.BaseConfig}
  */
 module.exports = {
