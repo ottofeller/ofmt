@@ -41,12 +41,16 @@ if (args.input[0] === 'install') {
 } else {
   const checkOrWrite = args.flags.lint ? 'check' : 'write --list-different'
   const configPath = path.resolve(packageRoot, prettierConfigPath)
-  exec(`npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`, (error, stdout, stderr) => {
+
+  ;[
+    `npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`,
+    `npx eslint --config @ottofeller/eslint-config-ofmt/eslint.layout.cjs ${args.flags.lint ? '' : '--fix'} ${args.input}`,
+  ].forEach((command) => exec(command, (error, stdout, stderr) => {
     console.log(stdout)
 
     if (error) {
       console.log(stderr)
       process.exit(1)
     }
-  })
+  }))
 }
