@@ -10,11 +10,12 @@ import {install} from '../lib/install.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const packageRoot = path.resolve(__dirname, '..')
 
-const prettierConfigPath = [
+const relativePrettierConfigPath = [
   '../prettier-config-ofmt/index.json', // Path within another package, where 'ofmt' is installed as a dependency.
   'node_modules/@ottofeller/prettier-config-ofmt/index.json', // Path within this package.
 ].find((filePath) => {
   const fullPath = path.resolve(packageRoot, filePath)
+
   try {
     return statSync(fullPath)
   } catch {
@@ -23,7 +24,7 @@ const prettierConfigPath = [
   }
 })
 
-if (!prettierConfigPath) {
+if (!relativePrettierConfigPath) {
   console.error('Prettier config file is not found. Please install "@ottofeller/prettier-config-ofmt".')
   process.exit(1)
 }
@@ -40,12 +41,16 @@ if (args.input[0] === 'install') {
   install(args.input[1] || './', args.flags.srcPath)
 } else {
   const checkOrWrite = args.flags.lint ? 'check' : 'write --list-different'
-  const configPath = path.resolve(packageRoot, prettierConfigPath)
+  const prettierConfigPath = path.resolve(packageRoot, relativePrettierConfigPath)
+
+  const eslintConfigPath = path.resolve(
+    packageRoot,
+    'node_modules/@ottofeller/eslint-config-ofmt/eslint.formatting.cjs',
+  )
 
   ;[
-    `npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`,
-    // TODO Uncomment when the config is published.
-    // `npx eslint --config @ottofeller/eslint-config-ofmt/eslint.layout.cjs ${args.flags.lint ? '' : '--fix'} ${args.input}`,
+    `npx prettier --${checkOrWrite} --config ${prettierConfigPath} ${args.input}`,
+    `npx eslint --config ${eslintConfigPath} ${args.flags.lint ? '' : '--fix'} ${args.input}`,
   ].forEach((command) => {
     exec(command, (error, stdout, stderr) => {
       console.log(stdout)
