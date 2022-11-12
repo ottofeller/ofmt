@@ -44,13 +44,16 @@ if (args.input[0] === 'install') {
 
   ;[
     `npx prettier --${checkOrWrite} --config ${configPath} ${args.input}`,
-    `npx eslint --config @ottofeller/eslint-config-ofmt/eslint.layout.cjs ${args.flags.lint ? '' : '--fix'} ${args.input}`,
-  ].forEach((command) => exec(command, (error, stdout, stderr) => {
-    console.log(stdout)
+    // TODO Uncomment when the config is published.
+    // `npx eslint --config @ottofeller/eslint-config-ofmt/eslint.layout.cjs ${args.flags.lint ? '' : '--fix'} ${args.input}`,
+  ].forEach((command) => {
+    exec(command, (error, stdout, stderr) => {
+      console.log(stdout)
 
-    if (error) {
-      console.log(stderr)
-      process.exit(1)
-    }
-  }))
+      if (error) {
+        console.log(stderr)
+        process.exit(1)
+      }
+    })
+  })
 }
