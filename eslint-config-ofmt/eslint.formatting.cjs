@@ -5,7 +5,7 @@
  */
 
 /**
- * @type {import('eslint').Linter.BaseConfig}
+ * @type {import('eslint').Linter.Config}
  */
 module.exports = {
   env    : {browser: true, jest: true, node: true},

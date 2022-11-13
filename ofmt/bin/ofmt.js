@@ -64,9 +64,11 @@ if (args.input[0] === 'install') {
 } else {
   const checkOrWrite = args.flags.lint ? 'check' : 'write --list-different'
 
+  const eslintExt = '.cjs,.js,.jsx,.ts,.tsx'
+
   ;[
     `npx prettier --${checkOrWrite} --config ${prettierConfigPath} ${args.input}`,
-    `npx eslint --config ${eslintConfigPath} ${args.flags.lint ? '' : '--fix'} ${args.input}`,
+    `npx eslint --ext ${eslintExt} --config ${eslintConfigPath} ${args.flags.lint ? '' : '--fix'} ${args.input}`,
   ].forEach((command) => {
     exec(command, (error, stdout, stderr) => {
       console.log(stdout)
