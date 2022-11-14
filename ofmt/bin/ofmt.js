@@ -40,8 +40,11 @@ const args = meow({
 if (args.input[0] === 'install') {
   install(args.input[1] || './', args.flags.srcPath)
 } else {
+  const checkPaths = args.input.join(' ')
   const checkOrWrite = args.flags.lint ? 'check' : 'write --list-different'
   const prettierConfigPath = path.resolve(packageRoot, relativePrettierConfigPath)
+  const eslintExtensions = '.cjs,.js,.jsx,.ts,.tsx'
+  const eslintFix = args.flags.lint ? '' : '--fix'
 
   const eslintConfigPath = path.resolve(
     packageRoot,
@@ -49,8 +52,8 @@ if (args.input[0] === 'install') {
   )
 
   ;[
-    `npx prettier --${checkOrWrite} --config ${prettierConfigPath} ${args.input}`,
-    `npx eslint --config ${eslintConfigPath} ${args.flags.lint ? '' : '--fix'} ${args.input}`,
+    `npx prettier --${checkOrWrite} --config ${prettierConfigPath} ${checkPaths}`,
+    `npx eslint --config ${eslintConfigPath} --ext ${eslintExtensions} ${eslintFix} ${checkPaths}`,
   ].forEach((command) => {
     exec(command, (error, stdout, stderr) => {
       console.log(stdout)
