@@ -19,4 +19,9 @@ jobs:
       with:
         node-version: ${{ matrix.version }}
         command: npm run lint
+        directory: ./eslint-config-ofmt
+    - uses: ottofeller/github-actions/npm-run@main
+      with:
+        node-version: ${{ matrix.version }}
+        command: cd ../eslint-config-ofmt && npm ci && cd ../ofmt && npm run lint
         directory: ./ofmt

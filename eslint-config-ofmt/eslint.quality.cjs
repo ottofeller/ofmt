@@ -1,6 +1,7 @@
 module.exports = {
   env    : {browser: true, jest: true, node: true},
   extends: ['plugin:import/typescript'],
+  ignorePatterns: '!.projenrc.ts',
   globals: {document: 'readonly', navigator: 'readonly', window: 'readonly'},
 
   overrides: [
