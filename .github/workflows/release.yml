@@ -33,7 +33,7 @@ jobs:
     - uses: ottofeller/github-actions/npm-run@main
       with:
         node-version: ${{ matrix.version }}
-        command: npm run lint
+        command: cd ../eslint-config-ofmt && npm ci && cd ../ofmt && npm run lint
         directory: ./ofmt
 
   publish-npm:
