@@ -1,6 +1,6 @@
 {
   "name": "@ottofeller/eslint-config-ofmt",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "ESLint config files for @ottofeller/ofmt",
   "dependencies": {
     "@ottofeller/eslint-plugin-ottofeller": "0.1.3",
