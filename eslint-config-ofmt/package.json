@@ -4,8 +4,9 @@
   "description": "ESLint config files for @ottofeller/ofmt",
   "dependencies": {
     "@ottofeller/eslint-plugin-ottofeller": "0.1.3",
-    "@typescript-eslint/eslint-plugin": "5.30.7",
-    "@typescript-eslint/parser": "5.30.7",
+    "@typescript-eslint/eslint-plugin": "5.49.0",
+    "@typescript-eslint/parser": "5.49.0",
+    "@typescript-eslint/typescript-estree": "5.49.0",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-react": "7.30.1",
@@ -14,7 +15,7 @@
   },
   "devDependencies": {
     "eslint": "8.20.0",
-    "typescript": "4.8.4"
+    "typescript": "4.9.4"
   },
   "peerDependencies": {
     "eslint": ">= 8",
