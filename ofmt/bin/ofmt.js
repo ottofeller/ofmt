@@ -56,6 +56,7 @@ const args = meow({
   flags: {
     lint: {type: 'boolean', alias: 'l'},
     srcPath: {type: 'string', alias: 'p', default: './src'},
+    localConfig: {type: 'boolean', alias: 'n', default: true},
   },
 })
 
@@ -68,7 +69,9 @@ if (args.input[0] === 'install') {
 
   ;[
     `npx prettier --${checkOrWrite} --config ${prettierConfigPath} ${args.input}`,
-    `npx eslint --ext ${eslintExt} --config ${eslintConfigPath} ${args.flags.lint ? '' : '--fix'} ${args.input}`,
+    `npx eslint --ext ${eslintExt} --config ${eslintConfigPath} ${args.flags.lint ? '' : '--fix'} ${
+      args.flags.localConfig ? '' : '--no-eslintrc'
+    } ${args.input}`,
   ].forEach((command) => {
     exec(command, (error, stdout, stderr) => {
       console.log(stdout)
