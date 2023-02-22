@@ -23,6 +23,7 @@ module.exports = {
 
   // Static analysis and code quality
   rules: {
+    '@typescript-eslint/ban-ts-comment'       : ["error", {"ts-expect-error": 'allow-with-description', "ts-ignore": 'allow-with-description'}],
     '@typescript-eslint/no-duplicate-imports' : ['error'],
     '@typescript-eslint/no-shadow'            : ['error'],
     '@typescript-eslint/no-unused-expressions': ['error'],
