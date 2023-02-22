@@ -43,6 +43,7 @@ There are two _bin_ files that perform the code checking:
 - `ofmt` - prettier formatter. Two options are available:\
   `-l, --lint` - a flag to perform checking only. Without the flag `prettier` will rewrite files with fixed formatting.
   `-p, --src-path` - defines search path for source code within `format` and `lint` scripts (the scripts added to a project upon installation). Defaults to `./src`. Used only with `install` command.
+  `-n, --noConfig` - ignores local eslint config files.
 - `olint` - code quality and best practices linter.
 
 ## Examples:
