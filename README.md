@@ -41,9 +41,9 @@ Direct use of configs is meant only for IDE support. For CLI runs use the provid
 
 There are two _bin_ files that perform the code checking:
 - `ofmt` - prettier formatter. Two options are available:\
-  `-l, --lint` - a flag to perform checking only. Without the flag `prettier` will rewrite files with fixed formatting.
-  `-p, --src-path` - defines search path for source code within `format` and `lint` scripts (the scripts added to a project upon installation). Defaults to `./src`. Used only with `install` command.
-  `-n, --no-local-config` - ignores local eslint config files.
+  - `-l, --lint` - a flag to perform checking only. Without the flag `prettier` will rewrite files with fixed formatting.
+  - `-p, --src-path` - defines search path for source code within `format` and `lint` scripts (the scripts added to a project upon installation). Defaults to `./src`. Used only with `install` command.
+  - `-n, --no-local-config` - ignores local eslint config files.
 - `olint` - code quality and best practices linter.
 
 ## Examples:
