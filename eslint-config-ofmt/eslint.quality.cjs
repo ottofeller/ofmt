@@ -28,7 +28,6 @@ module.exports = {
     '@typescript-eslint/no-shadow'            : ['error'],
     '@typescript-eslint/no-unused-expressions': ['error'],
     '@typescript-eslint/no-unused-vars'       : ['error', {argsIgnorePattern: '^_'}],
-    'complexity'                              : ['error', {max: 12}],
     'curly'                                   : ['error'],
     'import/no-relative-parent-imports'       : ['error'],
     'no-negated-condition'                    : ['error'],
