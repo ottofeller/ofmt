@@ -24,9 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [12, 16]
+        version: [16, 18]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
         ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
@@ -43,12 +43,12 @@ jobs:
     env: 
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: ${{ needs.set-commit-hash.outputs.commit_hash }}
       - name: Set up Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
